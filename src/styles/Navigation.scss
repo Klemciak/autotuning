@@ -1,0 +1,72 @@
+// font-family: 'Kanit', sans-serif;
+
+.nav {
+  background-color: #e08a09;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Kanit";
+
+  .logo {
+    display: block;
+    width: 500px;
+  }
+
+  .nav_list {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 10vh;
+
+    .nav_list_element {
+      text-transform: uppercase;
+      font-size: 27px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-left: 4px solid #363535;
+
+      .nav_list_element_text {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 0 22px;
+        line-height: 10vh;
+        z-index: 2;
+      }
+      .nav_list_element_text.active {
+        background-color: #363535;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #363535;
+        transition: 0.2s ease-in-out;
+        z-index: 1;
+      }
+
+      &.down::before {
+        top: -100%;
+      }
+
+      &:hover::before {
+        top: 0;
+      }
+
+      &:nth-child(5) {
+        border-right: 4px solid #313131;
+      }
+    }
+  }
+}

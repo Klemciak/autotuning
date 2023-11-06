@@ -1,23 +1,31 @@
 import React from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
+import logo from "../graphics/logo.png"
+import "../styles/Navigation.scss"
 
 const list = [
-  { name: "start", path: "/", exact: true },
-  { name: "o nas", path: "/about" },
-  { name: "projekty", path: "/project" },
-  { name: "sklep", path: "/shop" },
-  { name: "kontakt", path: "/contact" },
+  { animation: "up", name: "start", path: "/", exact: true },
+  { animation: "down", name: "o nas", path: "/about" },
+  { animation: "up", name: "projekty", path: "/project" },
+  { animation: "down", name: "sklep", path: "/shop" },
+  { animation: "up", name: "kontakt", path: "/contact" },
 ]
 
 const Navigation = () => {
   const menu = list.map((item) => (
-    <li key={item.name}>
-      <NavLink to={item.path}>{item.name}</NavLink>
+    <li key={item.name} className={`nav_list_element ${item.animation}`}>
+      <NavLink to={item.path} className="nav_list_element_text">
+        {item.name}
+      </NavLink>
     </li>
   ))
+
   return (
-    <nav className="main">
-      <ul>{menu}</ul>
+    <nav className="nav">
+      <Link to="/">
+        <img src={logo} alt="Auto-Tuning logo" className="logo" />
+      </Link>
+      <ul className="nav_list">{menu}</ul>
     </nav>
   )
 }
