@@ -1,13 +1,13 @@
 import React from "react"
 import { BrowserRouter as Router } from "react-router-dom"
-import Header from "./Header"
 import Navigation from "./Navigation"
+import Page from "./Page"
 import "../styles/App.scss"
 const App = () => {
   return (
     <Router>
-      <nav>{<Navigation />}</nav>
-      <header>{<Header />}</header>
+      <header>{<Navigation />}</header>
+      <main>{<Page />}</main>
     </Router>
   )
 }
