@@ -30,8 +30,11 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      line-height: 100px;
-      border-left: 4px solid #363535;
+      margin-right: 5px;
+      line-height: 50px;
+      border: 3px solid #363535;
+      background-color: rgb(179, 102, 1);
+      border-radius: 5px;
 
       .nav_list_element_text {
         display: block;
