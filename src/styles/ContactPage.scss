@@ -54,8 +54,59 @@
       font-size: 15px;
       line-height: 15px;
     }
+    &.error {
+      border: 2px solid red;
+      background-color: #ffc5c5;
+      &::placeholder {
+        color: black;
+      }
+    }
   }
   & textarea {
     height: 150px;
+  }
+  & .form_name_btn {
+    width: 150px;
+    font-size: 22px;
+    line-height: 22px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #363535;
+    background-color: rgb(179, 102, 1);
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #363535;
+    }
+  }
+}
+
+.contact_info {
+  .contact_info_title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: normal;
+  }
+  .contact_info_adress {
+    margin-bottom: 30px;
+  }
+  .contact_info_telephone {
+    margin-bottom: 50px;
+    &_number {
+      text-decoration: none;
+      color: #e08a09;
+      margin-left: 10px;
+    }
+  }
+
+  .contact_info_email {
+    margin-bottom: 50px;
+    &_text {
+      text-decoration: none;
+      color: #e08a09;
+      margin-left: 10px;
+    }
   }
 }

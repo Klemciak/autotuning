@@ -1,6 +1,53 @@
-import React from "react"
+import React, { useState } from "react"
 import "../styles/ContactPage.scss"
 const ContactPage = () => {
+  const [nameInputValue, setNameInputValue] = useState("")
+  const [nameInputError, setNameInputError] = useState(false)
+
+  const [surnameInputValue, setSurnameInputValue] = useState("")
+  const [surnameInputError, setSurnameInputError] = useState(false)
+
+  const [emailInputValue, setEmailInputValue] = useState("")
+  const [emailInputError, setEmailInputError] = useState(false)
+
+  const [textAreaValue, setTextAreaValue] = useState("")
+  const [textAreaError, setTextAreaError] = useState("")
+
+  const checkValue = (e, setState, setErrorState) => {
+    const value = e.target.value
+    setState(value)
+    if (value.trim() !== "") {
+      setErrorState(false)
+    }
+  }
+
+  const checkForm = (e) => {
+    e.preventDefault()
+    if (nameInputValue.trim() === "") {
+      setNameInputError(true)
+    } else {
+      setNameInputError(false)
+    }
+
+    if (surnameInputValue.trim() === "") {
+      setSurnameInputError(true)
+    } else {
+      setSurnameInputError(false)
+    }
+
+    if (emailInputValue.trim() === "") {
+      setEmailInputError(true)
+    } else {
+      setEmailInputError(false)
+    }
+
+    if (textAreaValue.trim() === "") {
+      setTextAreaError(true)
+    } else {
+      setTextAreaError(false)
+    }
+  }
+
   return (
     <div className="contact">
       <iframe
@@ -34,18 +81,44 @@ const ContactPage = () => {
         </div>
 
         <div className="form_wrap">
-          <form className="form" id="form" noValidate>
-            <input type="text" placeholder="*Imię" required className="form_name" id="form_name" />
-            <input type="text" placeholder="*Nazwisko" required className="form_surname" id="form_surname" />
-            <input type="email" placeholder="*E-mail" required className="form_name_email" id="form_name_email" />
+          <form className="form" id="form" onSubmit={checkForm} noValidate>
+            <input
+              type="text"
+              placeholder={nameInputError ? "*Imię - To pole jest wymagane" : "*Imię"}
+              required
+              className={`form_name ${nameInputError ? "error" : ""}`}
+              id="form_name"
+              value={nameInputValue}
+              onChange={(e) => checkValue(e, setNameInputValue, setNameInputError)}
+            />
+            <input
+              type="text"
+              placeholder={surnameInputError ? "*Nazwisko - To pole jest wymagane" : "*Nazwisko"}
+              required
+              className={`form_surname ${surnameInputError ? "error" : ""}`}
+              id="form_surname"
+              value={surnameInputValue}
+              onChange={(e) => checkValue(e, setSurnameInputValue, setSurnameInputError)}
+            />
+            <input
+              type="email"
+              placeholder={emailInputError ? "*E-mail - To pole jest wymagane" : "*E-mail"}
+              required
+              className={`form_name_email ${emailInputError ? "error" : ""}`}
+              id="form_name_email"
+              value={emailInputValue}
+              onChange={(e) => checkValue(e, setEmailInputValue, setEmailInputError)}
+            />
             <input type="tel" placeholder="Telefon" className="form_name_telephone" id="form_name_telephone" />
             <input type="text" placeholder="Tytuł" className="form_name_title" id="form_name_title" />
             <textarea
               type="textarea"
-              placeholder="*Twoja wiadomość"
-              className="form_name_text"
+              placeholder={textAreaError ? "*Twoja wiadomość - To pole jest wymagane" : "*Twoja wiadomość"}
+              className={`form_name_text ${textAreaError ? "error" : ""}`}
               id="form_name_text"
               required
+              value={textAreaValue}
+              onChange={(e) => checkValue(e, setTextAreaValue, setTextAreaError)}
             />
             <input type="submit" value="Wyślij" className="form_name_btn" id="form_name_btn" />
           </form>
