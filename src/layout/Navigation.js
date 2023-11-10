@@ -7,7 +7,7 @@ import "../styles/Navigation.scss"
 
 const Navigation = () => {
   const menu = list.map((item) => (
-    <li key={item.name} className={`nav_list_element ${item.animation}`}>
+    <li key={item.name} className={`nav_list_element ${item.animation} `} id={`${item.id}`}>
       <NavLink to={item.path} className="nav_list_element_text">
         {item.name}
       </NavLink>

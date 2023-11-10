@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import validator from "validator"
 import "../styles/ContactPage.scss"
 const ContactPage = () => {
   const [nameInputValue, setNameInputValue] = useState("")
@@ -40,11 +41,25 @@ const ContactPage = () => {
     } else {
       setEmailInputError(false)
     }
+    if (!validator.isEmail(emailInputValue)) {
+      setEmailInputError(true)
+    } else {
+      setEmailInputError(false)
+    }
 
     if (textAreaValue.trim() === "") {
       setTextAreaError(true)
+      setEmailInputValue("")
     } else {
       setTextAreaError(false)
+    }
+    if (
+      nameInputValue.trim() !== "" &&
+      surnameInputValue.trim() !== "" &&
+      emailInputValue.trim() !== "" &&
+      textAreaValue.trim() !== ""
+    ) {
+      alert("By się wysłało :)")
     }
   }
 

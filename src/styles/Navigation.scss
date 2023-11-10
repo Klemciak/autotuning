@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     list-style: none;
+    // position: relative;
 
     .nav_list_element {
       text-transform: uppercase;
@@ -35,6 +36,7 @@
       border: 3px solid #363535;
       background-color: rgb(179, 102, 1);
       border-radius: 5px;
+      cursor: pointer;
 
       .nav_list_element_text {
         display: block;

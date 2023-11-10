@@ -98,6 +98,10 @@
       text-decoration: none;
       color: #e08a09;
       margin-left: 10px;
+      transition: 0.3s;
+      &:hover {
+        color: black;
+      }
     }
   }
 
@@ -107,6 +111,10 @@
       text-decoration: none;
       color: #e08a09;
       margin-left: 10px;
+      transition: 0.3s;
+      &:hover {
+        color: black;
+      }
     }
   }
 }
