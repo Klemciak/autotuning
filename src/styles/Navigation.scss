@@ -76,19 +76,20 @@
     }
   }
 }
-
-.crumb {
+.breadcrumbs {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 100vw;
   background-color: #363535;
   height: 50px;
-
-  .crumb_text {
-    font-family: "Kanit", sans-serif;
+  &_element,
+  &_element_last {
     color: white;
     text-decoration: none;
+
+    display: block;
+    font-family: "Kanit", sans-serif;
     text-transform: uppercase;
     transition: 0.3s;
     &:after {
@@ -108,5 +109,8 @@
     &:hover {
       color: #e08a09;
     }
+  }
+  &_element_last {
+    cursor: default;
   }
 }

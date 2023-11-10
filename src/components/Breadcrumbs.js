@@ -3,30 +3,41 @@ import { useLocation, Link } from "react-router-dom"
 import list from "../components/NavigationList.js"
 import carList from "../components/ProjectCarList.js"
 
-export default function Breadcrumbs() {
+const Breadcrumbs = () => {
   const location = useLocation()
-  let currentLink = ""
 
-  const crumbs = location.pathname
-    .split("/")
-    .filter((crumb) => crumb !== "")
-    .map((crumb) => {
-      currentLink += `/${crumb}`
-      const listEntry = list.find((item) => item.path === currentLink)
-      const listCarEntry = carList.find((item) => item.path === currentLink)
-      const crumbName = listCarEntry ? listCarEntry.name : listEntry ? listEntry.name : crumb
+  const pathSegments = location.pathname.split("/")
+  let currentLink = []
 
-      return (
-        <div className="crumb" key={crumb}>
-          <Link to="/" className="crumb_text">
-            Start
-          </Link>
-          <Link to={currentLink} className="crumb_text">
-            {crumbName}
-          </Link>
-        </div>
-      )
-    })
+  pathSegments.forEach((crumb) => {
+    currentLink.push(`/${crumb}`)
+  })
 
-  return <div className="breadcrumbs">{crumbs}</div>
+  const matchingListEntries = list.filter((item) => currentLink.includes(item.path))
+  const matchingCarListEntries = carList.filter((item) => currentLink.includes(item.path))
+
+  const allMatchingEntries = matchingListEntries.concat(matchingCarListEntries)
+  console.log(allMatchingEntries)
+
+  return (
+    <div className="breadcrumbs">
+      {allMatchingEntries.map((element, index, array) => (
+        <React.Fragment key={element.id}>
+          {index === array.length - 1 ? (
+            <span className="breadcrumbs_element_last">{element.name}</span>
+          ) : (
+            <Link
+              to={element.path === "/project" ? "/project" : element.path}
+              key={element.id}
+              className="breadcrumbs_element"
+            >
+              {element.name}
+            </Link>
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+  )
 }
+
+export default Breadcrumbs
