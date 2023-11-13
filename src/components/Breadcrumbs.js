@@ -17,7 +17,6 @@ const Breadcrumbs = () => {
   const matchingCarListEntries = carList.filter((item) => currentLink.includes(item.path))
 
   const allMatchingEntries = matchingListEntries.concat(matchingCarListEntries)
-  console.log(allMatchingEntries)
 
   return (
     <div className="breadcrumbs">
