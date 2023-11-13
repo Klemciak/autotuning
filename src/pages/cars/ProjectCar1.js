@@ -101,6 +101,55 @@ const ProjectCar1 = () => {
           </div>
         </div>
       </section>
+      <section className="description">
+        <div className="description_box">
+          <div className="description_box_title">
+            manhart mh3 3.5 turbo: Legendarny samochód turystyczny z sześciocylindrowym turbodoładowaniem
+          </div>
+          <p className="description_box_text">
+            To w szalonych latach 80. BMW E30 M3 zdobyło aktualny do dziś tytuł najbardziej utytułowanego wyścigowego
+            samochodu turystycznego wszechczasów: tytuł mistrza świata, dwa tytuły mistrzów Europy, ponad 60 mistrzostw
+            stanowych - w tym dwa tytuły w Mistrzostwach Niemiec Samochodów Turystycznych i ponad 1000 ogólnych
+            zwycięstw w krajowych i międzynarodowych wyścigach i rajdach samochodowych można przypisać barczystemu
+            Bawarczykowi. Mając na uwadze taką aurę, naturalnie skorzystaliśmy z okazji, aby uszlachetnić kopię E30 M3.
+          </p>
+          <p className="description_box_text">
+            Już w latach 80-tych i 90-tych nasi technicy nie stronili od skomplikowanych zamian technologii, na przykład
+            wyposażając pojazdy E30 M3 w sześciocylindrowe silniki M z modeli E28 M5 (M88) lub E34 M5 (S38). MH3 3.5
+            TURBO jest jeszcze bardziej spektakularny. Legendarny, wysokoobrotowy czterocylindrowy silnik o pojemności
+            2,3 litra został wyrzucony z komory silnika M3, aby zrobić miejsce dla jeszcze bardziej szalonej jednostki:
+            sześciocylindrowy turbodoładowany ALPINA B7 S Turbo przeniósł się do maszynowni! Dzięki wymuszonej
+            wentylacji za pomocą turbosprężarki K27 firm Kühnle, Kopp i Kausch, ten 3,5-litrowy rzędowy
+            sześciocylindrowy silnik zapewniał już „standardowe” 330 KM i 500 Nm, które napędzały B7 S Turbo w oparciu o
+            BMW E12 do Vmax 260 km/h, co czyniło go wówczas najszybszym seryjnie produkowanym sedanem na świecie. Ale to
+            nie wszystko! Po modyfikacjach turbosprężarki i intercoolera na żądanie dostępne jest teraz 405 KM i potężny
+            moment obrotowy 650 Nm. Moc można regulować za pomocą ręcznego regulatora doładowania. Spaliny ryczą na
+            zewnątrz przez układ wydechowy MANHART, co nie ma wpływu na historyczny wstęp. Moc silnika przenoszona jest
+            na koła napędowe za pośrednictwem pięciobiegowej manualnej skrzyni biegów i mechanizmu różnicowego Drexler z
+            25-procentową blokadą i dodatkową chłodnicą.
+          </p>
+          <p className="description_box_text">
+            Aby po raz kolejny podkreślić dziedzictwo sportów motorowych MH3 3.5 TURBO, daliśmy dwudrzwiowej limuzynie
+            przedni spojler z włókna węglowego i tylny spojler ze skrzydłami z włókna węglowego, z których każdy
+            przypomina ostateczny etap rozbudowy E30 M3 „Sport Evolution”. Ponadto MH3 3.5 TURBO ma na sobie matową
+            zieloną foliową sukienkę, z którą czarne tylne światła i kierunkowskazy kontrastują znacznie mniej niż
+            otaczające je czerwone linie akcentujące. Są one również noszone na własnych felgach aluminiowych: Koła
+            MANHART Concave One w klasycznym układzie podwójnych szprych mają wymiary 8,5 x 19 cali z oponami 215/35R19
+            na osi kierowanej i 9,5 x 19 cali z oponami 245/30 na osi oś napędowa. Za kombinacjami koła i opony zaciski
+            układu hamulcowego MANHART świecą jaskrawoczerwono, co działa na nawiercanych tarczach milimetrowych 330x32
+            z czterotłoczkowymi stałymi zaciskami Brembo z przodu. Z tyłu również nawiercane tarcze hamulcowe połączono
+            z pływającymi zaciskami OEM E30 M3. Jednorurowe zawieszenie gwintowane MANHART firmy H&R zapewnia optymalną
+            przyczepność kół do nawierzchni i wyjątkowo zwinne prowadzenie cywilnego samochodu wyścigowego.
+          </p>
+          <p className="description_box_text">
+            Jeśli chodzi o kabinę pasażerską MH3 3.5 TURBO, nie trzeba obawiać się ascezy sportów motorowych: tutaj
+            pasażerów wita oryginalne skórzane wnętrze w kardynalnej czerwieni. Trójramienna sportowa kierownica Momo o
+            średnicy 350 milimetrów i drewniana gałka zmiany biegów noszą logo MANHART. Wyświetlacz danych wbudowany po
+            lewej stronie środkowego nawiewu informuje kierowcę o licznych parametrach życiowych turbodoładowanego
+            silnika B7 S.
+          </p>
+        </div>
+      </section>
     </div>
   )
 }
