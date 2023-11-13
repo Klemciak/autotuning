@@ -39,10 +39,13 @@
   font-weight: bold;
   cursor: pointer;
 }
-.hide {
-  display: none;
-  transition: 0.3;
+.nav_list_dropdown.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
 }
-.show {
-  display: block;
+.nav_list_dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
 }
