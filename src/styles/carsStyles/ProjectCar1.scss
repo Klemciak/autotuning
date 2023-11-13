@@ -95,3 +95,24 @@
     }
   }
 }
+
+.gallery {
+  padding: 0 30px;
+}
+.image-gallery {
+  &-icon:hover {
+    color: #e08a09;
+  }
+  &-index {
+    font-family: "Kanit", sans-serif;
+  }
+  &-thumbnail:hover {
+    border-color: #e08a09;
+  }
+  &-thumbnail.active {
+    border-color: #e08a09;
+  }
+  &-thumbnail.active {
+    border-color: #e08a09;
+  }
+}

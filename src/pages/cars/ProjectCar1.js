@@ -1,7 +1,62 @@
 import React from "react"
+import e30img0 from "../../graphics/bmw-e30/bmw-e30-img0.jpg"
 import e30img1 from "../../graphics/bmw-e30/bmw-e30-img1.jpg"
+import e30img2 from "../../graphics/bmw-e30/bmw-e30-img2.jpg"
+import e30img3 from "../../graphics/bmw-e30/bmw-e30-img3.jpg"
+import e30img4 from "../../graphics/bmw-e30/bmw-e30-img4.jpg"
+import e30img5 from "../../graphics/bmw-e30/bmw-e30-img5.jpg"
+import e30img6 from "../../graphics/bmw-e30/bmw-e30-img6.jpg"
+import e30img7 from "../../graphics/bmw-e30/bmw-e30-img7.jpg"
+import e30img8 from "../../graphics/bmw-e30/bmw-e30-img8.jpg"
+import e30img9 from "../../graphics/bmw-e30/bmw-e30-img9.jpg"
+import e30img10 from "../../graphics/bmw-e30/bmw-e30-img10.jpg"
+import ImageGallery from "react-image-gallery"
+import "react-image-gallery/styles/scss/image-gallery.scss"
 import "../../styles/carsStyles/ProjectCar1.scss"
 const ProjectCar1 = () => {
+  const images = [
+    {
+      original: e30img0,
+      thumbnail: e30img0,
+    },
+    {
+      original: e30img2,
+      thumbnail: e30img2,
+    },
+    {
+      original: e30img3,
+      thumbnail: e30img3,
+    },
+    {
+      original: e30img4,
+      thumbnail: e30img4,
+    },
+    {
+      original: e30img5,
+      thumbnail: e30img5,
+    },
+    {
+      original: e30img6,
+      thumbnail: e30img6,
+    },
+    {
+      original: e30img7,
+      thumbnail: e30img7,
+    },
+    {
+      original: e30img8,
+      thumbnail: e30img8,
+    },
+    {
+      original: e30img9,
+      thumbnail: e30img9,
+    },
+    {
+      original: e30img10,
+      thumbnail: e30img10,
+    },
+  ]
+
   return (
     <div className="wrapper">
       <section className="title">
@@ -149,6 +204,9 @@ const ProjectCar1 = () => {
             silnika B7 S.
           </p>
         </div>
+      </section>
+      <section className="gallery">
+        <ImageGallery items={images} showIndex={true} />
       </section>
     </div>
   )
