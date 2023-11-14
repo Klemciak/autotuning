@@ -1,5 +1,5 @@
 import React from "react"
-import "../../styles/carsStyles/ProjectCar2.scss"
+import "../../styles/carsStyles/ProjectCar2And6.scss"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 import Fiat500img1 from "../../graphics/fiat-500/Fiat500-img1.jpg"
@@ -44,66 +44,66 @@ const ProjectCar2 = () => {
           </p>
         </section>
       </div>
-      <section className="galleryFiat">
+      <section className="galleryFiatAndShelby">
         <Carousel>
           <div>
-            <img src={Fiat500img1} />
+            <img src={Fiat500img1} alt="zdjęcie fiat 500 lewy przód" />
           </div>
           <div>
-            <img src={Fiat500img2} />
+            <img src={Fiat500img2} alt="zdjęcie fiat 500 grill" />
           </div>
           <div>
-            <img src={Fiat500img3} />
+            <img src={Fiat500img3} alt="zdjęcie fiat 500 prawy przód" />
           </div>
           <div>
-            <img src={Fiat500img4} />
+            <img src={Fiat500img4} alt="zdjęcie fiat 500 prawy tył" />
           </div>
           <div>
-            <img src={Fiat500img6} />
+            <img src={Fiat500img6} alt="zdjęcie fiat 500 znaczek" />
           </div>
           <div>
-            <img src={Fiat500img7} />
+            <img src={Fiat500img7} alt="zdjęcie fiat 500 nadkole" />
           </div>
           <div>
-            <img src={Fiat500img8} />
+            <img src={Fiat500img8} alt="zdjęcie fiat 500 siedzenie kierowcy" />
           </div>
           <div>
-            <img src={Fiat500img9} />
+            <img src={Fiat500img9} alt="zdjęcie fiat 500 siedzienia tył" />
           </div>
           <div>
-            <img src={Fiat500img10} />
+            <img src={Fiat500img10} alt="zdjęcie fiat 500 kierownica" />
           </div>
           <div>
-            <img src={Fiat500img11} />
+            <img src={Fiat500img11} alt="zdjęcie fiat 500 siedzenia przód" />
           </div>
         </Carousel>
       </section>
       <div className="wrapper_secondSection">
-        <section className="descriptionFiat">
-          <p className="descriptionFiat_text">
+        <section className="specification">
+          <p className="specification_text">
             Satynowo-ceramiczna szara maska z usuniętymi diodami LED nadaje pojazdowi bardziej celowy wygląd, a wiry
             generowane przez samochody wyścigowe były inspiracją dla przebudowanego tylnego dyfuzora. Czarne listwy
             progowe i przyciemniane tylne światła dopełniają efektownego wyglądu.
           </p>
-          <p className="descriptionFiat_text">
+          <p className="specification_text">
             4-ramienne 18-calowe felgi ze stopów lekkich zostały wyprodukowane w Fondmetal, legendarnej włoskiej odlewni
             i długoletnich współpracownikach Kahna, i są wykończone w kolorze hipersrebrnym, natomiast sportowe
             zawieszenie, które obniża pojazd o 25 mm, zostało opracowane we współpracy z przemysłem -liderzy H&R.
           </p>
-          <p className="descriptionFiat_text">
+          <p className="specification_text">
             Kontynuacją tematu Designio są tarcze z insygniami Designio, wykończone w kolorze złotym oraz sygnowana
             przez Designio linia autokarów, podkreślająca tradycyjne brytyjskie rzemiosło.
           </p>
-          <p className="descriptionFiat_text">
+          <p className="specification_text">
             Kontrastując z agresywnym wyglądem zewnętrznym, wnętrze inspirowane modą wysoką uosabia nowoczesną
             stylistykę, czerpiąc jednocześnie inspiracje z klasycznych projektów mediolańskich domów mody z lat 70.
           </p>
-          <p className="descriptionFiat_text">
+          <p className="specification_text">
             Modułowy pakiet siedzeń Designio Oyster 3D obejmuje pikowane siedzenia z przodu i z tyłu wykończone wegańską
             skórą w kolorze oceanicznej turkusu, z wytłoczonym napisem Designio. W pełni karbonowa kierownica ze srebrną
             linią godziny 12 zapewnia luksusowy akcent.
           </p>
-          <p className="descriptionFiat_text">
+          <p className="specification_text">
             Afzal Kahn skomentował: „Przemyślany pakiet nadwozia wraz z bogatym wnętrzem wprowadzi anglo-włoski styl na
             ulice Wielkiej Brytanii i nie tylko”.
           </p>

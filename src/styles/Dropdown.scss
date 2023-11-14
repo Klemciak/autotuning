@@ -39,6 +39,14 @@
   font-weight: bold;
   cursor: pointer;
 }
+.hide_arrow {
+  transition: 0.3s;
+}
+.show_arrow {
+  transition: 0.3s;
+  transform: translate(-150%, 110%) rotate(-90deg);
+}
+
 .nav_list_dropdown.hide {
   opacity: 0;
   visibility: hidden;

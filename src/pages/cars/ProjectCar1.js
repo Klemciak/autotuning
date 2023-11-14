@@ -12,7 +12,7 @@ import e30img9 from "../../graphics/bmw-e30/bmw-e30-img9.jpg"
 import e30img10 from "../../graphics/bmw-e30/bmw-e30-img10.jpg"
 import ImageGallery from "react-image-gallery"
 import "react-image-gallery/styles/scss/image-gallery.scss"
-import "../../styles/carsStyles/ProjectCar1.scss"
+import "../../styles/carsStyles/ProjectCar1And4.scss"
 import BackToTopButton from "../../components/BackToTopButton"
 const ProjectCar1 = () => {
   const images = [
