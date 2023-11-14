@@ -33,10 +33,11 @@ const BackToTopButton = () => {
             border: "3px solid #E08A09",
             cursor: "pointer",
             textAlign: "center",
+            backgroundColor: "#36353590",
           }}
           onClick={scrollUp}
         >
-          <span class="material-symbols-outlined" style={{ fontSize: "40px", paddingTop: "3px" }}>
+          <span className="material-symbols-outlined" style={{ fontSize: "40px", paddingTop: "3px" }}>
             double_arrow
           </span>
         </div>

@@ -1,0 +1,71 @@
+.wrapper_firstSection {
+  border-top: 10px solid #e08a09;
+  background: linear-gradient(to bottom, rgba(221, 221, 221, 0.596), rgba(0, 0, 0, 0.712), rgb(0, 0, 0));
+  .head {
+    padding: 0 30px 40px 30px;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    &_title,
+    &_date,
+    &_author {
+      text-align: center;
+    }
+    &_title {
+      color: #e08a09;
+      text-transform: uppercase;
+      font-size: 40px;
+      padding: 20px 0;
+    }
+    &_description {
+      color: #e08a09;
+      font-size: 25px;
+      padding: 20px 0;
+    }
+    &_text {
+      font-size: 20px;
+      margin: 10px 0 10px 20px;
+      padding: 5px;
+      background-color: #36353570;
+    }
+  }
+}
+
+.galleryFiat {
+  padding: 0 30px;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(221, 221, 221, 0.596), rgb(0, 0, 0));
+  border-bottom: 10px solid #e08a09;
+  border-top: 10px solid #e08a09;
+  .thumbs.animated {
+    text-align: center;
+  }
+  .carousel-status {
+    font-family: "Kanit", sans-serif;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.503);
+  }
+  .carousel .control-arrow,
+  .carousel.carousel-slider .control-arrow {
+    opacity: 1;
+    width: 8%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.wrapper_secondSection {
+  padding-bottom: 30px;
+  border-bottom: 10px solid #e08a09;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.712), rgb(0, 0, 0), rgba(221, 221, 221, 0.596));
+  .descriptionFiat {
+    color: white;
+    font-family: "Kanit", sans-serif;
+    &_text {
+      font-size: 20px;
+      margin: 10px 0 10px 20px;
+      padding: 5px;
+      background-color: #36353570;
+    }
+    &_text:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

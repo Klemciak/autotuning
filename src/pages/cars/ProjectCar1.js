@@ -206,7 +206,7 @@ const ProjectCar1 = () => {
           </p>
         </div>
       </section>
-      <section className="gallery">
+      <section className="galleryBmw">
         <ImageGallery items={images} showIndex={true} />
       </section>
       <BackToTopButton />
