@@ -24,7 +24,7 @@
       }
       .box_text {
         margin: 50px 0;
-        font-size: 23px;
+        font-size: 20px;
       }
     }
     &_imgBox {
@@ -32,6 +32,9 @@
       height: 100%;
       background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img6.jpg");
       background-size: cover;
+      &.royce {
+        background-image: url("../../graphics/rolls-royce-ghost/rolls-royce-img1cut.jpg");
+      }
     }
   }
 }
@@ -43,17 +46,26 @@
   .containers_imgBox {
     width: 50%;
     height: 100%;
-    background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img5.jpg");
+    background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img5cut.jpg");
     background-size: cover;
+    &.royce {
+      background-image: url("../../graphics/rolls-royce-ghost/rolls-royce-img2.jpg");
+    }
     &:nth-child(2) {
-      background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img9.jpg");
+      background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img9cut.jpg");
+      &.royce {
+        background-image: url("../../graphics/rolls-royce-ghost/rolls-royce-img7cut.jpg");
+      }
     }
   }
   .containers_imgBox4 {
     width: 50%;
     height: 100%;
-    background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img8.jpg");
+    background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img8cut.jpg");
     background-size: cover;
+    &.royce {
+      background-image: url("../../graphics/rolls-royce-ghost/rolls-royce-img8cut.jpg");
+    }
   }
 }
 

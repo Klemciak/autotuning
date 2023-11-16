@@ -44,6 +44,7 @@ const WSPGallery = ({ galleryImages }) => {
               </div>
             )
           })}
+        <div className="counterImg">+{galleryImages.length - 6}</div>
       </div>
     </>
   )
