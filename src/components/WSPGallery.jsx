@@ -18,7 +18,7 @@ const WSPGallery = ({ galleryImages }) => {
     slideNumber + 1 === galleryImages.length ? setSlideNumber(0) : setSlideNumber(slideNumber + 1)
   }
   return (
-    <div>
+    <>
       {openModal && (
         <div className="sliderWrap">
           <span className="material-symbols-outlined btnClose" onClick={handleCloseModal}>
@@ -45,7 +45,7 @@ const WSPGallery = ({ galleryImages }) => {
             )
           })}
       </div>
-    </div>
+    </>
   )
 }
 

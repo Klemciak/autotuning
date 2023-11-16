@@ -1,5 +1,7 @@
+@import "./variables.scss";
 .nav_list {
   position: relative;
+  z-index: 5;
   &_dropdown {
     position: absolute;
     top: 50%;
@@ -19,7 +21,7 @@
       width: 100%;
       display: block;
       padding: 7px 20px;
-      color: white;
+      color: $text-color;
       text-decoration: none;
       text-transform: uppercase;
       transition: 0.3s;

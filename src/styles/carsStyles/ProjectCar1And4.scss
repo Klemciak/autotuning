@@ -1,3 +1,4 @@
+@import "../variables.scss";
 .wrapper {
   width: 100%;
   padding: 0 40px;
@@ -20,11 +21,11 @@
     bottom: 0;
     left: 0;
     font-size: 60px;
-    font-family: "Kanit", sans-serif;
+    font-family: $main-fontFamily;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
-    color: #e08a09;
+    color: $main-color;
     background: linear-gradient(to bottom, rgb(0, 0, 0, 0), rgba(0, 0, 0, 0.712), rgb(0, 0, 0));
   }
 }
@@ -35,31 +36,31 @@
   grid-gap: 40px;
   margin: 50px 30px 0 30px;
   padding-bottom: 100px;
-  font-family: "Kanit", sans-serif;
-  border-bottom: 10px solid #e08a09;
+  font-family: $main-fontFamily;
+  border-bottom: 10px solid $main-color;
 
   &_title {
     width: 100%;
     grid-column: span 4;
-    color: white;
+    color: $text-color;
     font-size: 30px;
   }
   &_box {
-    background-color: #363535;
+    background-color: $darkGrey-color;
     &_inner {
       padding: 20px;
     }
   }
 }
 .specifications_box_title {
-  color: #e08a09;
+  color: $main-color;
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 10px;
 }
 .specifications_box_list {
   &_text {
-    color: white;
+    color: $text-color;
     list-style: square;
     margin-bottom: 7px;
     margin-left: 20px;
@@ -70,16 +71,16 @@
   position: relative;
   top: 0;
   left: 0;
-  color: white;
+  color: $text-color;
   margin: 0 30px;
   padding-bottom: 100px;
-  font-family: "Kanit", sans-serif;
-  border-bottom: 10px solid #e08a09;
+  font-family: $main-fontFamily;
+  border-bottom: 10px solid $main-color;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.233), rgb(0, 0, 0), rgb(0, 0, 0));
   &_box {
     padding: 0 20px;
     &_title {
-      color: #e08a09;
+      color: $main-color;
       font-weight: bold;
       font-size: 50px;
       line-height: 1.1;
@@ -102,18 +103,18 @@
 .image-gallery {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.233), rgb(0, 0, 0), rgb(0, 0, 0));
   &-icon:hover {
-    color: #e08a09;
+    color: $main-color;
   }
   &-index {
-    font-family: "Kanit", sans-serif;
+    font-family: $main-fontFamily;
   }
   &-thumbnail:hover {
-    border-color: #e08a09;
+    border-color: $main-color;
   }
   &-thumbnail.active {
-    border-color: #e08a09;
+    border-color: $main-color;
   }
   &-thumbnail.active {
-    border-color: #e08a09;
+    border-color: $main-color;
   }
 }

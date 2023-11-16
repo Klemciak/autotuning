@@ -1,0 +1,71 @@
+@import "../variables.scss";
+.wrap {
+  width: 90%;
+  margin: 0 auto;
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+    &_box {
+      width: 50%;
+      font-family: $main-fontFamily;
+      text-align: center;
+      padding: 100px;
+      .box_title {
+        padding: 10px 0;
+        width: 100%;
+        background-color: $darkGrey-color;
+        font-size: 40px;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: bold;
+        color: $main-color;
+      }
+      .box_text {
+        margin: 50px 0;
+        font-size: 23px;
+      }
+    }
+    &_imgBox {
+      width: 50%;
+      height: 100%;
+      background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img6.jpg");
+      background-size: cover;
+    }
+  }
+}
+.containers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+  .containers_imgBox {
+    width: 50%;
+    height: 100%;
+    background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img5.jpg");
+    background-size: cover;
+    &:nth-child(2) {
+      background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img9.jpg");
+    }
+  }
+  .containers_imgBox4 {
+    width: 50%;
+    height: 100%;
+    background-image: url("../../graphics/lamborghini-aventador/lamborghini-aventador-img8.jpg");
+    background-size: cover;
+  }
+}
+
+.textAboveGallery {
+  padding: 10px 0;
+  width: 100%;
+  background-color: $darkGrey-color;
+  margin: 50px 0 30px 0;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: $main-fontFamily;
+  text-align: center;
+  font-weight: bold;
+  color: $main-color;
+}

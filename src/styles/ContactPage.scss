@@ -1,3 +1,4 @@
+@import "./variables.scss";
 .map {
   position: relative;
   top: 0;
@@ -27,7 +28,7 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  font-family: "Kanit", sans-serif;
+  font-family: $main-fontFamily;
 }
 .form_wrap {
   background-color: #aca9a9;
@@ -44,13 +45,13 @@
     margin-bottom: 2px;
     border: none;
     border-radius: 5px;
-    font-family: "Kanit", sans-serif;
+    font-family: $main-fontFamily;
     &:focus {
       outline: none;
     }
 
     &::placeholder {
-      font-family: "Kanit", sans-serif;
+      font-family: $main-fontFamily;
       font-size: 15px;
       line-height: 15px;
     }
@@ -69,7 +70,7 @@
     width: 150px;
     font-size: 22px;
     line-height: 22px;
-    color: white;
+    color: $text-color;
     font-weight: bold;
     border: 3px solid #363535;
     background-color: rgb(179, 102, 1);
@@ -96,7 +97,7 @@
     margin-bottom: 50px;
     &_number {
       text-decoration: none;
-      color: #e08a09;
+      color: $main-color;
       margin-left: 10px;
       transition: 0.3s;
       &:hover {
@@ -109,7 +110,7 @@
     margin-bottom: 50px;
     &_text {
       text-decoration: none;
-      color: #e08a09;
+      color: $main-color;
       margin-left: 10px;
       transition: 0.3s;
       &:hover {

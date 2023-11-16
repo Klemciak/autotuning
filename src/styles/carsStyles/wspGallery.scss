@@ -1,11 +1,11 @@
+@import "../variables.scss";
 .galleryWrap {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  position: relative;
 
   & .single {
     max-width: 33.3%;
@@ -19,9 +19,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: white;
+        color: $text-color;
         font-size: 24px;
-        font-family: "Kanit", sans-serif;
+        font-family: $main-fontFamily;
         width: 100%;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
@@ -65,7 +65,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     &:hover {
-      color: #e08a09;
+      color: $main-color;
     }
   }
   & .btnClose {
