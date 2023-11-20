@@ -10,6 +10,7 @@ import rollsRoyceImg8 from "../../graphics/rolls-royce-ghost/rolls-royce-img8.jp
 
 import WSPGallery from "../../components/WSPGallery"
 import "../../styles/carsStyles/ProjectCar3And5.scss"
+import BackToTopButton from "../../components/BackToTopButton"
 
 const ProjectCar5 = () => {
   const galleryImages = [
@@ -97,6 +98,7 @@ const ProjectCar5 = () => {
       </div>
       <div className="textAboveGallery">Galeria</div>
       <WSPGallery galleryImages={galleryImages} />
+      <BackToTopButton />
     </div>
   )
 }

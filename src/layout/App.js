@@ -5,10 +5,12 @@ import Page from "./Page"
 import "../styles/App.scss"
 const App = () => {
   return (
-    <Router>
-      <header>{<Navigation />}</header>
-      <main>{<Page />}</main>
-    </Router>
+    <div className="fullWrap">
+      <Router>
+        <header>{<Navigation />}</header>
+        <main>{<Page />}</main>
+      </Router>
+    </div>
   )
 }
 

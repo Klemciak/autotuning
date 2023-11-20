@@ -12,6 +12,7 @@ import lamboImg10 from "../../graphics/lamborghini-aventador/lamborghini-aventad
 import lamboImg11 from "../../graphics/lamborghini-aventador/lamborghini-aventador-img11.jpg"
 import WSPGallery from "../../components/WSPGallery"
 import "../../styles/carsStyles/ProjectCar3And5.scss"
+import BackToTopButton from "../../components/BackToTopButton"
 
 const ProjectCar3 = () => {
   const galleryImages = [
@@ -107,6 +108,7 @@ const ProjectCar3 = () => {
       </div>
       <div className="textAboveGallery">Galeria</div>
       <WSPGallery galleryImages={galleryImages} />
+      <BackToTopButton />
     </div>
   )
 }
