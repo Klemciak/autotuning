@@ -1,0 +1,58 @@
+@import "./variables.scss";
+.personsWrap {
+  padding: 40px 0;
+  text-align: center;
+  &_title {
+    width: 75%;
+    font-family: $main-fontFamily;
+    text-transform: uppercase;
+    margin: 0 auto 40px auto;
+    font-size: 50px;
+    background-color: $darkGrey-color;
+    color: $main-color;
+    border-radius: 15px;
+  }
+  &_persons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      height: 25px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $main-color;
+      border-radius: 6px;
+      border: 3px solid $darkGrey-color;
+      background-clip: content-box;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #c0c0c0;
+    }
+
+    &_person {
+      margin: 0 30px 20px;
+      background-color: $darkGrey-color;
+      font-family: $main-fontFamily;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid $main-color;
+      .person_img {
+        border-radius: 10px;
+        border: 2px solid $lightGrey-color;
+      }
+      .person_name {
+        font-size: 25px;
+        color: white;
+      }
+      .person_email {
+        font-size: 20px;
+        color: $lightGrey-color;
+      }
+      .person_nick {
+        font-size: 15px;
+        color: $main-color;
+      }
+    }
+  }
+}

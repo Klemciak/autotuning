@@ -1,6 +1,12 @@
 import React from "react"
+import PeopleList from "../components/PeopleList.js"
+import "../styles/AboutPage.scss"
 const AboutPage = () => {
-  return <div>o nas</div>
+  return (
+    <>
+      <PeopleList />
+    </>
+  )
 }
 
 export default AboutPage
