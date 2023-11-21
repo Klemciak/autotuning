@@ -45,6 +45,18 @@ const PeopleList = () => {
           ))}
         </div>
       )}
+      <p className="personsWrap_description">
+        Nasz wyjątkowy zespół pasjonatów tuningowania samochodów to nie tylko mechanicy, ale artyści drogi, którzy
+        przekształcają każde auto w manifestację wyrafinowanego stylu. Znając tajniki mechaniki pojazdowej, doskonale
+        rozumiemy, jak podkreślić moc i wydajność, jednocześnie nadając pojazdowi unikalny charakter. Nie tylko
+        spełniamy oczekiwania techniczne, ale także dbamy o estetykę, aby każde nasze dzieło było niezapomnianym
+        przeżyciem dla kierowcy. Nasza pasja do doskonalenia detali i świadomość najnowszych osiągnięć w dziedzinie
+        motoryzacji sprawiają, że nasz sztab to prawdziwi pionierzy stylu i innowacji w świecie tuningowania samochodów.
+        Jesteśmy dumni z dziedzictwa, jakie tworzymy, nadając każdemu pojazdowi charakter, który przyciąga spojrzenia i
+        dostarcza niezapomnianą przyjemność z jazdy. Nasz sztab, zawsze kierując się pasją, pragnie zaoferować klientom
+        nie tylko doskonałą wydajność, ale również niepowtarzalne doznania w świecie spersonalizowanych motoryzacyjnych
+        arcydzieł.
+      </p>
     </div>
   )
 }
