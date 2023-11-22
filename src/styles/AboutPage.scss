@@ -67,3 +67,100 @@
     box-shadow: inset 0px 0px 13px 1px rgba(0, 0, 0, 1);
   }
 }
+
+.our {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $main-fontFamily;
+  padding: 0 100px;
+  &_valuesWrap,
+  &_characteristicWrap {
+    width: 45%;
+    height: 430px;
+    background-color: grey;
+    padding: 30px 40px;
+    margin: 40px 0;
+    border: 3px solid $darkGrey-color;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 13px 1px rgba(0, 0, 0, 1);
+  }
+  &_characteristicWrap {
+    background-color: $main-color;
+  }
+}
+
+.values {
+  &_title {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: $main-color;
+  }
+  &_box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    &_img {
+      background-color: $main-color;
+      color: $darkGrey-color;
+      line-height: 40px;
+      font-size: 40px;
+      border-radius: 50%;
+      padding: 10px;
+      margin: 20px 10px;
+      border: 2px solid $darkGrey-color;
+    }
+    &_text {
+      &_title {
+        font-weight: bold;
+        color: $lightGrey-color;
+        font-size: 20px;
+      }
+      &_text {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.characteristic {
+  &_title {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: $darkGrey-color;
+  }
+  &_box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    line-height: 40px;
+    &_img {
+      cursor: pointer;
+    }
+    &_text {
+      margin: 10px 0;
+      overflow: hidden;
+      &_title {
+        color: $lightGrey-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 27px;
+        border-bottom: 1px solid $darkGrey-color;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          color: $darkGrey-color;
+        }
+      }
+      &_text {
+        transform: translateY(100%);
+        line-height: 20px;
+        transition: 0.5s;
+        &.active {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+}

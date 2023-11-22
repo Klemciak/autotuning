@@ -16,7 +16,6 @@ const PeopleList = () => {
         })
         .then((data) => {
           setPeopleData(data)
-          console.log(data)
         })
         .catch((error) => {
           console.error("Error fetching person data:", error)
