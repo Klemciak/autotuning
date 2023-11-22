@@ -1,6 +1,6 @@
 @import "./variables.scss";
 .personsWrap {
-  padding: 40px 0;
+  padding: 40px 0 80px;
   text-align: center;
   &_title {
     width: 75%;
@@ -57,7 +57,7 @@
     }
   }
   &_description {
-    margin: 40px 100px 0;
+    margin: 40px 100px 30px 100px;
     padding: 20px;
     font-family: $main-fontFamily;
     text-align: justify;
@@ -73,7 +73,9 @@
   justify-content: space-between;
   align-items: center;
   font-family: $main-fontFamily;
-  padding: 0 100px;
+  padding: 70px 100px;
+  border-top: 10px dashed $darkGrey-color;
+  border-bottom: 10px dashed $darkGrey-color;
   &_valuesWrap,
   &_characteristicWrap {
     width: 45%;
@@ -162,5 +164,148 @@
         }
       }
     }
+  }
+}
+
+.readMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 70px 100px;
+
+  &_box {
+    position: relative;
+    width: 30%;
+    text-align: justify;
+    padding: 10px 20px;
+    border: 3px solid $darkGrey-color;
+    border-radius: 15px;
+    box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 1);
+    font-family: $main-fontFamily;
+    &_title {
+      text-transform: uppercase;
+      font-size: 30px;
+      margin-top: 10px;
+    }
+    &_underTitle {
+      text-transform: uppercase;
+      font-size: 20px;
+      text-align: left;
+      margin: 25px 0;
+    }
+    &_text {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+    &_moreBtn {
+      position: relative;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #80808000;
+      padding: 10px 30px;
+      font-size: 25px;
+      font-family: $main-fontFamily;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 5px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+      overflow: hidden;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $lightGrey-color;
+        z-index: -1;
+      }
+      &:hover {
+        &::after {
+          top: 0;
+          right: -5%;
+          height: 100%;
+          width: 3px;
+          animation: moveAfter 10s infinite;
+        }
+        &::before {
+          top: -10%;
+          left: 0;
+          height: 3px;
+          width: 100%;
+          animation: moveBefore 10s infinite;
+        }
+      }
+    }
+  }
+  &_box:nth-child(1) {
+    background-color: $main-color;
+    & .readMore_box_moreBtn::after,
+    & .readMore_box_moreBtn::before {
+      background-color: $darkGrey-color;
+    }
+  }
+  &_box:nth-child(2) {
+    & .readMore_box_underTitle {
+      color: $main-color;
+    }
+    & .readMore_box_moreBtn::after,
+    & .readMore_box_moreBtn::before {
+      background-color: $main-color;
+    }
+  }
+  &_box:nth-child(3) {
+    background-color: #808080;
+    & .readMore_box_underTitle {
+      color: $lightGrey-color;
+    }
+  }
+}
+
+@keyframes moveAfter {
+  0% {
+    right: -10%;
+  }
+
+  20% {
+    right: 50%;
+  }
+  30% {
+    right: 50%;
+  }
+  50% {
+    right: 110%;
+  }
+  70% {
+    right: 50%;
+  }
+  80% {
+    right: 50%;
+  }
+  100% {
+    right: -10%;
+  }
+}
+@keyframes moveBefore {
+  0% {
+    top: -10%;
+  }
+
+  20% {
+    top: 50%;
+  }
+  30% {
+    top: 50%;
+  }
+  50% {
+    top: 110%;
+  }
+  70% {
+    top: 50%;
+  }
+  80% {
+    top: 50%;
+  }
+  100% {
+    top: -10%;
   }
 }

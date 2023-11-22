@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import validator from "validator"
 import "../styles/ContactPage.scss"
+import BackToTopButton from "../components/BackToTopButton"
 const ContactPage = () => {
   const [nameInputValue, setNameInputValue] = useState("")
   const [nameInputError, setNameInputError] = useState(false)
@@ -139,6 +140,7 @@ const ContactPage = () => {
           </form>
         </div>
       </div>
+      <BackToTopButton />
     </div>
   )
 }
