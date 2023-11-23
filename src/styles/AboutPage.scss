@@ -73,7 +73,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: $main-fontFamily;
-  padding: 70px 100px;
+  padding: 50px 100px;
   border-top: 10px dashed $darkGrey-color;
   border-bottom: 10px dashed $darkGrey-color;
   &_valuesWrap,
@@ -171,7 +171,7 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-  padding: 70px 100px;
+  padding: 80px 100px;
 
   &_box {
     position: relative;
