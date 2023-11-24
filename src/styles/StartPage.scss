@@ -1,0 +1,64 @@
+@import "./variables.scss";
+.teamWrap {
+  background-color: $darkGrey-color;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+  .teamBox {
+    padding: 60px;
+    max-width: 900px;
+    font-family: $main-fontFamily;
+    transform: translateX(-2000px);
+    transition: transform 2s ease-out;
+    &.slide1 {
+      transform: translateX(0px);
+    }
+    &_title {
+      font-size: 50px;
+      text-transform: uppercase;
+      color: $main-color;
+    }
+    &_underTitle {
+      font-size: 25px;
+      line-height: 30px;
+      margin: 30px 0 20px 0;
+      color: $lightGrey-color;
+    }
+    &_text {
+      font-size: 15px;
+      color: $lightGrey-color;
+    }
+    &_button {
+      margin-top: 40px;
+      padding: 5px 30px;
+      background-color: #00000000;
+      font-family: $main-fontFamily;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: 5px solid $main-color;
+      color: $main-color;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 20px;
+      &:hover {
+        background-color: $lightGrey-color;
+        color: $darkGrey-color;
+      }
+    }
+  }
+  .teamImg {
+    height: 700px;
+    width: 40%;
+    background-image: url("https://cdn.bmwblog.com/wp-content/uploads/2022/02/bmw-m4-g82-fire-orange-06.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(-2000px);
+    transition: transform 2s ease-out;
+    &.slide1 {
+      transform: translateX(0px);
+    }
+  }
+}

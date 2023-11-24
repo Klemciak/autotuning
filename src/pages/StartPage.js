@@ -1,13 +1,23 @@
-import React from "react"
-
+import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
 import "../styles/parallax.scss"
+import "../styles/StartPage.scss"
 import { Parallax, Pagination, Autoplay } from "swiper/modules"
 const StartPage = () => {
+  const [slide1, setSlide1] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        setSlide1(true)
+      }
+    })
+  }, [])
   return (
-    <>
+    <div className="StartPageWrap">
       <Swiper
         style={{
           "--swiper-pagination-color": "#fff",
@@ -21,7 +31,7 @@ const StartPage = () => {
         modules={[Parallax, Pagination, Autoplay]}
         autoplay={{
           delay: 6000,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
         }}
         className="mySwiper"
       >
@@ -88,7 +98,28 @@ const StartPage = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+      <div className="teamWrap">
+        <div className={`teamBox ${slide1 ? "slide1" : ""}`}>
+          <h2 className="teamBox_title">Nasz zespół</h2>
+          <p className="teamBox_underTitle">
+            "Tuning to magia, która ożywia maszyny. Dźwięki silnika to emocjonalna melodia, a poprawki to pędzle na
+            płótnie samochodu. To nie tylko moc, ale także dusza i indywidualność. Tuning to krótka podróż w świat
+            nieograniczonych możliwości, gdzie samochód staje się wyrazem twórczej pasji. To artystyczna ekspresja,
+            podkreślająca, że podróż jest równie istotna co cel."
+          </p>
+          <p className="teamBox_text">
+            Nasz zespół to doświadczeni eksperci w tuningu, z pasją do przerabiania aut. Specjalizujemy się w twardych
+            modyfikacjach, podkreślając charakter i siłę pojazdu. Nie boimy się wyzwań, a nasze wieloletnie
+            doświadczenie pozwala nam dokładnie dostosować każdy detal, sprawiając, że samochód staje się potężnym,
+            indywidualnym dziełem sztuki na czterech kołach.
+          </p>
+          <Link to="/about">
+            <button className="teamBox_button">Więcej..</button>
+          </Link>
+        </div>
+        <div className={`teamImg ${slide1 ? "slide1" : ""}`}></div>
+      </div>
+    </div>
   )
 }
 

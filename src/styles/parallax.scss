@@ -9,7 +9,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 60px;
-  min-height: 600px;
+  min-height: 700px;
   color: $lightGrey-color;
   display: flex;
   justify-content: start;
@@ -54,7 +54,7 @@
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
-  filter: brightness(50%);
+  filter: brightness(60%);
 }
 
 .swiper-pagination-bullet {
@@ -62,10 +62,10 @@
   height: 30px;
   background-color: $lightGrey-color;
   border: 3px solid black;
-  opacity: 0.8;
+  opacity: 0.6;
   transform: translateY(30%);
   &.swiper-pagination-bullet-active {
-    background-color: $main-color;
-    opacity: 1;
+    background-color: #782307;
+    opacity: 0.8;
   }
 }
