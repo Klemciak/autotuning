@@ -54,7 +54,7 @@ const StartPage = () => {
           slot="container-start"
           className="parallax-bg"
           style={{
-            "background-image": "url(https://4kwallpapers.com/images/wallpapers/lamborghini-5120x2880-11125.jpeg)",
+            backgroundImage: "url(https://4kwallpapers.com/images/wallpapers/lamborghini-5120x2880-11125.jpeg)",
           }}
           data-swiper-parallax="-23%"
         ></div>

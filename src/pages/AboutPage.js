@@ -18,7 +18,7 @@ const AboutPage = () => {
           <div className="values">
             <h2 className="values_title">Nasze wartości</h2>
             <div className="values_box">
-              <span class="material-symbols-outlined values_box_img">workspace_premium</span>
+              <span className="material-symbols-outlined values_box_img">workspace_premium</span>
               <div className="values_box_text">
                 <p className="values_box_text_title">Obsługa klienta</p>
                 <p className="values_box_text_text">
@@ -27,7 +27,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="values_box">
-              <span class="material-symbols-outlined values_box_img">build_circle</span>
+              <span className="material-symbols-outlined values_box_img">build_circle</span>
               <div className="values_box_text">
                 <p className="values_box_text_title">Bezpieczeństwo i niezawodność</p>
                 <p className="values_box_text_text">
@@ -36,7 +36,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="values_box">
-              <span class="material-symbols-outlined values_box_img">diversity_3</span>
+              <span className="material-symbols-outlined values_box_img">diversity_3</span>
               <div className="values_box_text">
                 <p className="values_box_text_title">Praca zespołowa</p>
                 <p className="values_box_text_text">
@@ -51,7 +51,7 @@ const AboutPage = () => {
             <h2 className="characteristic_title">Nasz charakter</h2>
             <div className="characteristic_box">
               <span
-                class="material-symbols-outlined characteristic_box_img"
+                className="material-symbols-outlined characteristic_box_img"
                 onClick={() => toggleClass("focused-on-goal")}
               >
                 {activeClass["focused-on-goal"] ? "remove" : "add"}
@@ -68,7 +68,7 @@ const AboutPage = () => {
             </div>
             <div className="characteristic_box">
               <span
-                class="material-symbols-outlined characteristic_box_img"
+                className="material-symbols-outlined characteristic_box_img"
                 onClick={() => toggleClass("energetic-and-full-of-enthusiasm")}
               >
                 {activeClass["energetic-and-full-of-enthusiasm"] ? "remove" : "add"}
@@ -91,7 +91,7 @@ const AboutPage = () => {
             </div>
             <div className="characteristic_box">
               <span
-                class="material-symbols-outlined characteristic_box_img"
+                className="material-symbols-outlined characteristic_box_img"
                 onClick={() => toggleClass("responsible-and-conscientious")}
               >
                 {activeClass["responsible-and-conscientious"] ? "remove" : "add"}
