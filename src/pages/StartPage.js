@@ -6,13 +6,28 @@ import "swiper/css/pagination"
 import "../styles/parallax.scss"
 import "../styles/StartPage.scss"
 import { Parallax, Pagination, Autoplay } from "swiper/modules"
+import BackToTopButton from "../components/BackToTopButton"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
 const StartPage = () => {
-  const [slide1, setSlide1] = useState(false)
+  const [team, setTeam] = useState(false)
+  const [project, setProject] = useState(false)
+  const [shop, setShop] = useState(false)
+  const [contact, setContact] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
-        setSlide1(true)
+        setTeam(true)
+      }
+      if (window.scrollY > 700) {
+        setProject(true)
+      }
+      if (window.scrollY > 1400) {
+        setShop(true)
+      }
+      if (window.scrollY > 2100) {
+        setContact(true)
       }
     })
   }, [])
@@ -99,7 +114,7 @@ const StartPage = () => {
         </SwiperSlide>
       </Swiper>
       <div className="teamWrap">
-        <div className={`teamBox ${slide1 ? "slide1" : ""}`}>
+        <div className={`teamBox ${team ? "teamSlide" : ""}`}>
           <h2 className="teamBox_title">Nasz zespół</h2>
           <p className="teamBox_underTitle">
             "Tuning to magia, która ożywia maszyny. Dźwięki silnika to emocjonalna melodia, a poprawki to pędzle na
@@ -117,8 +132,72 @@ const StartPage = () => {
             <button className="teamBox_button">Więcej..</button>
           </Link>
         </div>
-        <div className={`teamImg ${slide1 ? "slide1" : ""}`}></div>
+        <div className={`teamImg ${team ? "teamSlide" : ""}`}></div>
       </div>
+      <div className="projectWrap">
+        <div className="projectImg"></div>
+        <div className={`project ${project ? "projectSlide" : ""}`}>
+          <h2 className="project_title">Nasze projekty</h2>
+          <p className="project_text">
+            Sprawdź nasze poprawki w akcji! Zmieniliśmy nudne samochody w bestie na kołach. Zobacz, jak nasze ręce
+            czarodziejów ulepszyły silniki, dodając im sznytu i mocy. Od spoilerów po nowe felgi, nasze projekty to
+            kwintesencja tuningu. Nie wierzysz? Kliknij tu i zobacz sam! Nasze prace mówią same za siebie, bo w tym
+            biznesie pojęcie "zwykłe" nie istnieje. To nie jest poezja, to praktyka na czterech kółkach!
+          </p>
+          <Link to="/project">
+            <button className="project_button">Więcej..</button>
+          </Link>
+        </div>
+      </div>
+      <div className="shopWrap">
+        <div className={`shopImg ${shop ? "shopSlide" : ""}`}></div>
+        <div className={`shopBox ${shop ? "shopSlide" : ""}`}>
+          <h2 className="shopBox_title">Nasz sklep</h2>
+          <p className="shopBox_underTitle">
+            "Twój samochód to nie tylko metal i technologia. To manifestacja twojego charakteru, a sklep z częściami
+            samochodowymi to świątynia, dzięki której doskonałość staje się możliwa."
+          </p>
+          <p className="shopBox_text">
+            Zapraszamy do naszego sklepu z częściami samochodowymi! Odkryj bogactwo wysokiej jakości produktów, które
+            pozwolą podnieść wydajność i styl Twojego pojazdu. Znajdziesz tu wszystko, czego potrzebujesz, aby zadbać o
+            swoje auto. Zapraszamy do zakupów, gdzie pasja motoryzacyjna spotyka się z szerokim wyborem części
+            doskonałej jakości!
+          </p>
+          <Link to="/shop">
+            <button className="shopBox_button">Więcej..</button>
+          </Link>
+        </div>
+      </div>
+      <div className="contactWrap">
+        <div className={`contactBox ${contact ? "contactSlide" : ""}`}>
+          <h2 className="contactBox_title">Kontakt</h2>
+          <p className="contactBox_underTitle">Tymbark, ul. Polna 448, 34-650</p>
+          <p className="contactBox_text">
+            Staramy się spełnić wszystkie oczekiwania, w razie jakich kolwiek pytań odezwij się.
+          </p>
+          <div className="contactBox_socialMedia">
+            <Link to="/contact" className="contactBox_socialMedia_one">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </Link>
+            <Link to="/contact" className="contactBox_socialMedia_one">
+              <FontAwesomeIcon icon={faTwitter} />
+            </Link>
+            <Link to="/contact" className="contactBox_socialMedia_one">
+              <FontAwesomeIcon icon={faInstagram} />
+            </Link>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7294.488411002833!2d20.323385302712964!3d49.729792682248224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47161b190eea7aa1%3A0xc0e2b27138e3267e!2sTymbark!5e0!3m2!1spl!2spl!4v1699467654304!5m2!1spl!2spl"
+          style={{ border: "0" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="map"
+          className={`contactMap ${contact ? "contactSlide" : ""}`}
+        ></iframe>
+      </div>
+      <BackToTopButton />
     </div>
   )
 }

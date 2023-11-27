@@ -5,13 +5,15 @@
   justify-content: end;
   align-items: center;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
   .teamBox {
     padding: 60px;
     max-width: 900px;
     font-family: $main-fontFamily;
     transform: translateX(-2000px);
-    transition: transform 2s ease-out;
-    &.slide1 {
+    transition: transform 1s ease-out;
+    &.teamSlide {
       transform: translateX(0px);
     }
     &_title {
@@ -55,9 +57,211 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transform: translateX(2000px);
+    transition: transform 1s ease-out;
+    &.teamSlide {
+      transform: translateX(0px);
+    }
+  }
+}
+.projectWrap {
+  width: 100%;
+  position: relative;
+  min-height: 700px;
+  .projectImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 700px;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://wallpapercave.com/wp/wp9183365.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    filter: brightness(40%);
+  }
+  .project {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $main-fontFamily;
+    opacity: 0;
+    transition: 2s;
+    &.projectSlide {
+      opacity: 1;
+      top: 10%;
+    }
+    &_title {
+      text-transform: uppercase;
+      font-size: 50px;
+      color: $main-color;
+    }
+    &_text {
+      font-size: 20px;
+      color: $lightGrey-color;
+      padding: 30px 0 60px 0;
+      text-align: justify;
+    }
+    &_button {
+      margin-top: 40px;
+      padding: 5px 30px;
+      background-color: #00000000;
+      font-family: $main-fontFamily;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: 5px solid $main-color;
+      color: $main-color;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 20px;
+
+      &:hover {
+        background-color: $darkGrey-color;
+        color: $lightGrey-color;
+      }
+    }
+  }
+}
+.shopWrap {
+  position: relative;
+  z-index: 1;
+  background-color: $darkGrey-color;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .shopBox {
+    padding: 60px;
+    padding-bottom: 150px;
+    max-width: 900px;
+    font-family: $main-fontFamily;
+    transform: translateX(2000px);
+    transition: transform 1s ease-out;
+    &.shopSlide {
+      transform: translateX(0px);
+    }
+    &_title {
+      font-size: 50px;
+      text-transform: uppercase;
+      color: $main-color;
+    }
+    &_underTitle {
+      font-size: 25px;
+      line-height: 30px;
+      margin: 30px 0 20px 0;
+      color: $lightGrey-color;
+    }
+    &_text {
+      font-size: 15px;
+      color: $lightGrey-color;
+    }
+    &_button {
+      margin-top: 40px;
+      padding: 5px 30px;
+      background-color: #00000000;
+      font-family: $main-fontFamily;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: 5px solid $main-color;
+      color: $main-color;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 20px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      &:hover {
+        background-color: $lightGrey-color;
+        color: $darkGrey-color;
+      }
+    }
+  }
+  .shopImg {
+    height: 700px;
+    width: 40%;
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/027/261/788/large/alex-volg-24.jpg?1591037277");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: translateX(-2000px);
-    transition: transform 2s ease-out;
-    &.slide1 {
+    transition: transform 1s ease-out;
+
+    &.shopSlide {
+      transform: translateX(0px);
+    }
+  }
+}
+
+.contactWrap {
+  position: relative;
+  background-color: $darkGrey-color;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+  .contactBox {
+    padding: 60px;
+    max-width: 500px;
+    font-family: $main-fontFamily;
+    transform: translateY(2000px);
+    transition: transform 1s ease-out;
+    &.contactSlide {
+      transform: translateX(0px);
+    }
+    &_title {
+      font-size: 50px;
+      text-transform: uppercase;
+      color: $main-color;
+    }
+    &_underTitle {
+      font-size: 25px;
+      line-height: 30px;
+      margin: 30px 0 20px 0;
+      color: $lightGrey-color;
+    }
+    &_text {
+      font-size: 15px;
+      color: $lightGrey-color;
+      margin-bottom: 50px;
+    }
+    &_socialMedia {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &_one {
+        font-size: 90px;
+        margin-right: 50px;
+        color: $main-color;
+        transition: 0.3s;
+        &:hover {
+          color: $lightGrey-color;
+        }
+      }
+    }
+  }
+  .contactMap {
+    width: 60%;
+    min-height: 700px;
+    filter: grayscale(100%);
+    transform: translateY(2000px);
+    transition: transform 1s ease-out, filter 0.3s;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+    &.contactSlide {
       transform: translateX(0px);
     }
   }

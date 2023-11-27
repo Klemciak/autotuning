@@ -7,6 +7,8 @@
   align-items: center;
   font-family: $main-fontFamily;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
 
   .logo {
     display: block;
@@ -81,6 +83,8 @@
   width: 100%;
   background-color: $darkGrey-color;
   height: 50px;
+  position: relative;
+  z-index: 1;
   &_element,
   &_element_last {
     color: $text-color;
