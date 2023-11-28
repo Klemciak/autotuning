@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Felgi",
+    "price": 1200,
+    "imgUrl": "/itemsImg/felgi-black.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Naklejki samochodowe",
+    "price": 75.62,
+    "imgUrl": "/itemsImg/naklejka.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Spojler",
+    "price": 2100.99,
+    "imgUrl": "/itemsImg/spojler.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Wydech",
+    "price": 750,
+    "imgUrl": "/itemsImg/wydech.jpg"
+  }
+]

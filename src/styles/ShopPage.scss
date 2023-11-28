@@ -1,0 +1,64 @@
+@import "./variables.scss";
+.shopWrap {
+  background-color: $lightGrey-color;
+  display: block;
+}
+.cartBackground {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  margin-left: auto;
+  padding: 15px 35px 10px 20px;
+  background-color: $darkGrey-color;
+  border-radius: 20px 0 0 20px;
+  .cart {
+    background-color: #00000000;
+    border: 3px solid $lightGrey-color;
+    border-radius: 15px 3px 3px 15px;
+    padding: 5px;
+    color: $lightGrey-color;
+    font-size: 30px;
+    line-height: 30px;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      color: $main-color;
+      border-color: $main-color;
+    }
+    &_number {
+      position: absolute;
+      background-color: $main-color;
+      top: 20%;
+      right: -70%;
+      font-size: 25px;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      color: $darkGrey-color;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+  }
+}
+
+.items {
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  .item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.card {
+  width: 30%;
+  &_img {
+    height: 300px;
+  }
+}
+
+.check {
+  height: 3100px;
+}
