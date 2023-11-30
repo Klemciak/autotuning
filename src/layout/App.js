@@ -4,15 +4,18 @@ import Navigation from "./Navigation"
 import Page from "./Page"
 import Footer from "./Footer"
 import "../styles/App.scss"
+import { ShoppingCartProvider } from "../components/ShoppingCartContext.tsx"
 const App = () => {
   return (
-    <div className="fullWrap">
-      <Router>
-        <header>{<Navigation />}</header>
-        <main>{<Page />}</main>
-        <footer>{<Footer />}</footer>
-      </Router>
-    </div>
+    <ShoppingCartProvider>
+      <div className="fullWrap">
+        <Router>
+          <header>{<Navigation />}</header>
+          <main>{<Page />}</main>
+          <footer>{<Footer />}</footer>
+        </Router>
+      </div>
+    </ShoppingCartProvider>
   )
 }
 
