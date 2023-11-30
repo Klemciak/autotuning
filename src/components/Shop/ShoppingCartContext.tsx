@@ -18,6 +18,7 @@ type ShoppingCartContext = {
   removeFromCart: (id: number) => void
   cartQuantity: number
   cartItems: CartItem[]
+  IsOpen: boolean
 }
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
 
@@ -82,6 +83,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         closeCart,
         cartItems,
         cartQuantity,
+        IsOpen,
       }}
     >
       {children}

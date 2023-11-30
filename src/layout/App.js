@@ -4,7 +4,7 @@ import Navigation from "./Navigation"
 import Page from "./Page"
 import Footer from "./Footer"
 import "../styles/App.scss"
-import { ShoppingCartProvider } from "../components/ShoppingCartContext.tsx"
+import { ShoppingCartProvider } from "../components/Shop/ShoppingCartContext.tsx"
 const App = () => {
   return (
     <ShoppingCartProvider>

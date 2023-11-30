@@ -2,10 +2,10 @@ import React from "react"
 import "../styles/ShopPage.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
-import storeItems from "../components/shopItems.json"
-import { StoreItem } from "../components/StoreItem.tsx"
-import { useShoppingCart } from "../components/ShoppingCartContext.tsx"
-import { ShoppingCart } from "../components/ShoppingCart.tsx"
+import storeItems from "../components/Shop/shopItems.json"
+import { StoreItem } from "../components/Shop/StoreItem.tsx"
+import { useShoppingCart } from "../components/Shop/ShoppingCartContext.tsx"
+import { ShoppingCart } from "../components/Shop/ShoppingCart.tsx"
 const ShopPage = () => {
   const { openCart, cartQuantity } = useShoppingCart()
   return (
