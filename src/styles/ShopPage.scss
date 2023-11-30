@@ -2,6 +2,10 @@
 .shopWrapCart {
   background-color: $lightGrey-color;
   display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .cartBtn {
   position: fixed;
@@ -31,13 +35,13 @@
       position: absolute;
       background-color: $main-color;
       top: 20%;
-      right: -70%;
-      font-size: 25px;
-      width: 1.5rem;
+      right: -84%;
+      font-size: 20px;
+      width: 2rem;
       height: 1.5rem;
       line-height: 1.5rem;
       color: $darkGrey-color;
-      border-radius: 50%;
+      border-radius: 25%;
       font-weight: bold;
     }
   }
