@@ -1,26 +1,92 @@
 [
   {
     "id": 1,
-    "name": "Felgi",
-    "price": 1200,
-    "imgUrl": "/itemsImg/felgi-black.jpg"
+    "name": "Wydech akrapovic dual",
+    "price": 400.74,
+    "imgUrl": "/itemsImg/akrapovic-carbon-dual.jpg"
   },
   {
     "id": 2,
-    "name": "Naklejki samochodowe",
-    "price": 75.62,
-    "imgUrl": "/itemsImg/naklejka.jpg"
+    "name": "Wydech akrapovic",
+    "price": 160.48,
+    "imgUrl": "/itemsImg/Akrapovic-carbon.jpg"
   },
   {
     "id": 3,
-    "name": "Spojler",
-    "price": 2100.99,
-    "imgUrl": "/itemsImg/spojler.jpg"
+    "name": "Wydech serce",
+    "price": 212,
+    "imgUrl": "/itemsImg/exhaust-heart.jpg"
   },
   {
     "id": 4,
-    "name": "Wydech",
-    "price": 750,
-    "imgUrl": "/itemsImg/wydech.jpg"
+    "name": "Felgi samuraj",
+    "price": 1785,
+    "imgUrl": "/itemsImg/rims-black-A.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Felgi czarne",
+    "price": 1320,
+    "imgUrl": "/itemsImg/rims-black.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Felgi złote",
+    "price": 2222,
+    "imgUrl": "/itemsImg/rims-gold.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Spojler batman",
+    "price": 3200.88,
+    "imgUrl": "/itemsImg/spoiler-carbon.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Spoiler carbon",
+    "price": 1600,
+    "imgUrl": "/itemsImg/spoiler-carbon2.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Spoiler `Wing`",
+    "price": 2999,
+    "imgUrl": "/itemsImg/spoiler-tripleHandle.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Kierownica (blue)",
+    "price": 175.5,
+    "imgUrl": "/itemsImg/steeringWheel-blackBlue.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Kierownica (orange)",
+    "price": 166.99,
+    "imgUrl": "/itemsImg/steeringWheel-blackOrange.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Kierownica (red)",
+    "price": 198.89,
+    "imgUrl": "/itemsImg/steeringWheel-blackRed.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Naklejka kameleon",
+    "price": 50,
+    "imgUrl": "/itemsImg/chameleon-sticker.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Naklejka zły kameleon",
+    "price": 65,
+    "imgUrl": "/itemsImg/madChameleon-sticker.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Naklejka `Speed`",
+    "price": 45,
+    "imgUrl": "/itemsImg/redBlack-sticker.jpg"
   }
 ]

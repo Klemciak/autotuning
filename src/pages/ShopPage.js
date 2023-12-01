@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import "../styles/ShopPage.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
+import { faCartShopping, faLeftLong, faRightLong } from "@fortawesome/free-solid-svg-icons"
 import storeItems from "../components/Shop/shopItems.json"
 import { StoreItem } from "../components/Shop/StoreItem.tsx"
 import { useShoppingCart } from "../components/Shop/ShoppingCartContext.tsx"
 import { ShoppingCart } from "../components/Shop/ShoppingCart.tsx"
 
-const itemsPerPage = 4
+const itemsPerPage = 6
 
 const ShopPage = () => {
   const { openCart, cartQuantity } = useShoppingCart()
@@ -54,7 +54,7 @@ const ShopPage = () => {
           disabled={currentPage === 1}
           className="shopWrapCart_paggination_prevBtn"
         >
-          Previous
+          <FontAwesomeIcon icon={faLeftLong} />
         </button>
         {Array.from({ length: totalPages }, (i, index) => (
           <button
@@ -70,11 +70,10 @@ const ShopPage = () => {
           disabled={currentPage === totalPages}
           className="shopWrapCart_paggination_nextBtn"
         >
-          Next
+          <FontAwesomeIcon icon={faRightLong} />
         </button>
       </div>
       <ShoppingCart />
-      <p className="check">heh</p>
     </div>
   )
 }

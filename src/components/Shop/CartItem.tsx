@@ -21,9 +21,9 @@ export function CartItem({ id, quantity }: CartItemProps) {
         </div>
         <span className="cartPopup_body_item_text_priceOne">{item.price} zł</span>
       </div>
-      <span className="cartPopup_body_item_text_priceStack">{item.price * quantity} zł</span>
+      <span className="cartPopup_body_item_text_priceStack">Razem: {item.price * quantity} zł</span>
       <button className="cartPopup_body_item_btn" onClick={() => removeFromCart(item.id)}>
-        x
+        Usuń z koszyka
       </button>
     </div>
   )

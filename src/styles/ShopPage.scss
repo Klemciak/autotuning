@@ -6,10 +6,21 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  .shop_title {
+    width: 75%;
+    font-family: $main-fontFamily;
+    text-transform: uppercase;
+    margin: 50px auto 0px auto;
+    font-size: 50px;
+    background-color: $darkGrey-color;
+    color: $main-color;
+    border-radius: 15px;
+    text-align: center;
+  }
 }
 .cartBtn {
   position: fixed;
-  top: 20%;
+  top: 21%;
   right: 0;
   margin-left: auto;
   padding: 15px 35px 10px 20px;
@@ -54,39 +65,248 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-.item {
-  width: 25%;
-  height: 50%;
-  padding: 50px;
-  overflow: hidden;
-  text-align: center;
-  &_img {
-    height: 300px;
-    width: 300px;
-    object-fit: contain;
-    background-color: red;
+
+  .item {
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: $darkGrey-color;
+    border-radius: 15px;
+    font-family: $main-fontFamily;
+    &_img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      background-color: #ffffff00;
+      border-radius: 15px;
+      border: 5px solid $main-color;
+      transform: scale(0.9);
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1);
+      }
+    }
   }
 }
+.item_body {
+  .item_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 25px;
+    border-bottom: 1px solid $main-color;
+    &_name {
+      font-size: 25px;
+      font-weight: bold;
+      color: $main-color;
+    }
+    &_price {
+      font-size: 20px;
+      color: $lightGrey-color;
+    }
+  }
+  .add {
+    height: 100px;
+    &_button,
+    .plusAndMinus_btn,
+    .buttons_remove {
+      background-color: $darkGrey-color;
+      font-family: $main-fontFamily;
+      border: 3px solid $main-color;
+      border-radius: 15px;
+      padding: 5px;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $main-color;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: $main-color;
+        color: $darkGrey-color;
+      }
+    }
+    &_buttons {
+      .plusAndMinus {
+        color: $lightGrey-color;
+        &_btn {
+          padding: 0 10px;
+          margin: 0 40px;
+          line-height: 25px;
 
-.check {
-  height: 3100px;
+          &:nth-child(1) {
+            color: red;
+            border-color: red;
+          }
+          &:nth-last-child(1) {
+            color: greenyellow;
+            border-color: greenyellow;
+          }
+        }
+        &_quantity {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+      .buttons_remove {
+        padding: 0 10px;
+        margin-top: 30px;
+      }
+    }
+  }
 }
 
 .cartPopupWrap {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: 1s;
+  overflow: scroll;
   &.show {
-    display: block;
     position: fixed;
     top: 0;
     right: 0;
-    width: 800px;
+    width: 35%;
     height: 100%;
-    background-color: rgba(255, 0, 0, 0.253);
+    background-color: rgba(179, 102, 1, 0.9);
+    border-left: 5px solid black;
     z-index: 10;
   }
 }
+.cartPopup {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $main-fontFamily;
+  &_closeBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: $lightGrey-color;
+    }
+  }
+  &_title {
+    width: 75%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: $darkGrey-color;
+    color: $main-color;
+    border-radius: 15px;
+    text-align: center;
+  }
+}
 
-.cartPopup_body_item_img {
-  width: 300px;
+.cartPopup_body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &_item {
+    background-color: $darkGrey-color;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    border-radius: 15px;
+    &_img {
+      width: 350px;
+      border-radius: 15px;
+      border: 5px solid $main-color;
+    }
+    &_text {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      &_name {
+        font-size: 20px;
+        color: $main-color;
+        .text_name_quantity {
+          color: $lightGrey-color;
+          font-size: 17px;
+        }
+      }
+      &_priceOne {
+        color: $main-color;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      &_priceStack {
+        display: block;
+        margin: 10px 0;
+        color: $lightGrey-color;
+        font-weight: bold;
+      }
+    }
+    &_btn {
+      background-color: rgba(255, 255, 255, 0);
+      font-family: $main-fontFamily;
+      color: $main-color;
+      border: 3px solid $main-color;
+      border-radius: 15px;
+      font-size: 15px;
+      padding: 0 10px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: $main-color;
+        color: $darkGrey-color;
+      }
+    }
+  }
+  &_totalPrice {
+    width: 75%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: $darkGrey-color;
+    color: $lightGrey-color;
+    border-radius: 15px;
+    text-align: center;
+  }
+}
+
+.shopWrapCart_paggination {
+  margin-bottom: 50px;
+  &_prevBtn,
+  &_nextBtn,
+  &_page {
+    background-color: #ffffff00;
+    padding: 0px 10px;
+    margin: 0 5px;
+    font-family: $main-fontFamily;
+    font-size: 20px;
+    border: 3px solid $darkGrey-color;
+    border-radius: 20px;
+    background: $main-color;
+    font-weight: bold;
+    color: $darkGrey-color;
+    cursor: pointer;
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    &.activePage {
+      background-color: $darkGrey-color;
+      color: $main-color;
+      box-shadow: 0px 0px 3px 2px $main-color;
+    }
+  }
 }

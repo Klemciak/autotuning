@@ -30,13 +30,13 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 <button className="plusAndMinus_btn" onClick={() => decreaseCartQuantity(id)}>
                   -
                 </button>
-                <span className="plisAndMinus_quantity">{quantity}</span> w koszyku
+                <span className="plusAndMinus_quantity">{quantity}</span> w koszyku
                 <button className="plusAndMinus_btn" onClick={() => increaseCartQuantity(id)}>
                   +
                 </button>
               </div>
               <button className="buttons_remove" onClick={() => removeFromCart(id)}>
-                Remove
+                - Usuń z koszyka
               </button>
             </div>
           )}

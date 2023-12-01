@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react"
 import { useShoppingCart } from "./ShoppingCartContext.tsx"
 import { CartItem } from "./CartItem.tsx"
 import storeItems from "./shopItems.json"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 export function ShoppingCart() {
   const cartPopupRef = useRef<HTMLDivElement>(null)
@@ -23,7 +25,7 @@ export function ShoppingCart() {
     <div className={`cartPopupWrap ${IsOpen ? "show" : ""}`} ref={cartPopupRef}>
       <div className="cartPopup">
         <button className="cartPopup_closeBtn" onClick={closeCart}>
-          Zamknij popup
+          <FontAwesomeIcon icon={faCircleXmark} />
         </button>
         <div className="cartPopup_title">Koszyk</div>
         <div className="cartPopup_body">
@@ -31,11 +33,12 @@ export function ShoppingCart() {
             <CartItem key={item.id} {...item} />
           ))}
           <div className="cartPopup_body_totalPrice">
-            Total{" "}
+            Całkowity koszt:{" "}
             {cartItems.reduce((total, cartItem) => {
               const item = storeItems.find((i) => i.id === cartItem.id)
               return total + (item?.price || 0) * cartItem.quantity
             }, 0)}
+            zł
           </div>
         </div>
       </div>
