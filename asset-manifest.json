@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/autotuning/static/css/main.f5573f75.css",
-    "main.js": "/autotuning/static/js/main.80fb7fde.js",
+    "main.js": "/autotuning/static/js/main.aa6177fd.js",
     "static/media/Fiat500-img1.jpg": "/autotuning/static/media/Fiat500-img1.168be96246c4c08edd42.jpg",
     "static/media/Fiat500-img2.jpg": "/autotuning/static/media/Fiat500-img2.82d2364978379982cfd1.jpg",
     "static/media/Fiat500-img4.jpg": "/autotuning/static/media/Fiat500-img4.62670dff9c1a60b9f318.jpg",
@@ -58,10 +58,10 @@
     "static/media/logo.png": "/autotuning/static/media/logo.1186945e14c3ae9a78d6.png",
     "index.html": "/autotuning/index.html",
     "main.f5573f75.css.map": "/autotuning/static/css/main.f5573f75.css.map",
-    "main.80fb7fde.js.map": "/autotuning/static/js/main.80fb7fde.js.map"
+    "main.aa6177fd.js.map": "/autotuning/static/js/main.aa6177fd.js.map"
   },
   "entrypoints": [
     "static/css/main.f5573f75.css",
-    "static/js/main.80fb7fde.js"
+    "static/js/main.aa6177fd.js"
   ]
 }
