@@ -34,12 +34,19 @@ export function ShoppingCart() {
           ))}
           <div className="cartPopup_body_totalPrice">
             Całkowity koszt:{" "}
-            {cartItems.reduce((total, cartItem) => {
-              const item = storeItems.find((i) => i.id === cartItem.id)
-              return total + (item?.price || 0) * cartItem.quantity
-            }, 0)}
+            {cartItems
+              .reduce((total, cartItem) => {
+                const item = storeItems.find((i) => i.id === cartItem.id)
+                const itemPrice = item?.price || 0
+                const itemTotal = itemPrice * cartItem.quantity
+                return total + itemTotal
+              }, 0)
+              .toFixed(2)}{" "}
             zł
           </div>
+        </div>
+        <div className="cartPopup_buy">
+          <button className="cartPopup_buy_btn">Kup</button>
         </div>
       </div>
     </div>

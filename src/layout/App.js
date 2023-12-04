@@ -9,7 +9,7 @@ const App = () => {
   return (
     <ShoppingCartProvider>
       <div className="fullWrap">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <header>{<Navigation />}</header>
           <main>{<Page />}</main>
           <footer>{<Footer />}</footer>
