@@ -34,7 +34,7 @@ const BackToTopButton = () => {
             cursor: "pointer",
             textAlign: "center",
             backgroundColor: "#36353590",
-            zIndex: "100",
+            zIndex: "50",
           }}
           onClick={scrollUp}
         >

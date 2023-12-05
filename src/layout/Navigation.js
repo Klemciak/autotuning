@@ -5,9 +5,12 @@ import logo from "../graphics/logo.png"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Dropdown from "../components/Dropdown.js"
 import "../styles/Navigation.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
 
 const Navigation = () => {
   const [showProjectDropdown, setShowProjectDropdown] = useState(false)
+  const [showHamburgerNav, setShowHamburgerNav] = useState(false)
   const dropdownRef = useRef()
 
   const toggleDropdown = () => {
@@ -34,7 +37,7 @@ const Navigation = () => {
       className={`nav_list_element ${item.animation} ${item.path === "/project" ? "project" : ""}`}
       id={`${item.id}`}
     >
-      <NavLink to={item.path} className="nav_list_element_text">
+      <NavLink to={item.path} className="nav_list_element_text" onClick={() => setShowHamburgerNav(false)}>
         {item.name}
       </NavLink>
     </li>
@@ -62,6 +65,19 @@ const Navigation = () => {
             </div>
           </li>
         </ul>
+        {/* hamburger nav */}
+        <div className="nav_hamburger">
+          <span class="material-symbols-outlined nav_hamburger_icon" onClick={() => setShowHamburgerNav(true)}>
+            menu_open
+          </span>
+
+          <div className={`nav_hamburger_menu ${showHamburgerNav ? "active" : ""}`}>
+            <button className="nav_hamburger_menu_close" onClick={() => setShowHamburgerNav(false)}>
+              <FontAwesomeIcon icon={faXmark} />
+            </button>
+            {menu}
+          </div>
+        </div>
       </nav>
       <Breadcrumbs />
     </>
