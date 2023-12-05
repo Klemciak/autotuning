@@ -116,3 +116,28 @@
     cursor: default;
   }
 }
+
+@media (max-width: 1263px) {
+  .nav {
+    height: 200px;
+    justify-content: center;
+    align-content: start;
+    .logo {
+      width: 650px;
+    }
+  }
+}
+
+@media (max-width: 764px) {
+  .nav {
+    height: 100px;
+    justify-content: start;
+    align-content: center;
+    .logo {
+      width: 500px;
+    }
+    .nav_list {
+      display: none;
+    }
+  }
+}
