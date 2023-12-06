@@ -88,7 +88,7 @@
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 700px;
+    width: 700px;
     margin: 0 auto;
     text-align: center;
     font-family: $main-fontFamily;
@@ -132,13 +132,12 @@
 }
 .shopWrap {
   position: relative;
-  z-index: 1;
   background-color: $darkGrey-color;
   display: flex;
   justify-content: start;
   align-items: center;
   overflow: hidden;
-  position: relative;
+
   z-index: 1;
   .shopBox {
     padding: 60px;
@@ -263,6 +262,183 @@
     }
     &.contactSlide {
       transform: translateX(0px);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .teamWrap {
+    justify-content: space-between;
+    .teamBox {
+      padding: 30px;
+      max-width: 500px;
+    }
+    .teamImg {
+      height: 850px;
+      width: 50%;
+    }
+  }
+  .shopWrap {
+    .shopBox {
+      padding: 30px;
+      padding-bottom: 100px;
+      max-width: 500px;
+    }
+    .shopImg {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .teamWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    .teamBox {
+      padding: 30px;
+      max-width: 100%;
+    }
+    .teamImg {
+      height: 500px;
+      width: 100%;
+    }
+  }
+  .projectWrap {
+    .project {
+      width: 420px;
+    }
+  }
+  .shopWrap {
+    flex-direction: column;
+    justify-content: center;
+    .shopBox {
+      padding: 20px;
+      padding-bottom: 90px;
+      max-width: 900px;
+      order: -1;
+      margin-bottom: 30px;
+      text-align: justify;
+      &_title {
+        font-size: 40px;
+        text-align: center;
+      }
+      &_underTitle {
+        font-size: 25px;
+        line-height: 30px;
+        margin: 30px 0 20px 0;
+      }
+      &_text {
+        font-size: 15px;
+      }
+      &_button {
+        margin-top: 40px;
+        padding: 5px 20px;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+    .shopImg {
+      height: 500px;
+      width: 100%;
+    }
+  }
+  .contactWrap {
+    justify-content: center;
+  }
+  .contactMap {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .teamWrap {
+    .teamBox {
+      padding: 10px;
+      max-width: 100%;
+      text-align: justify;
+      &_title {
+        text-align: center;
+        font-size: 40px;
+      }
+      &_underTitle {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      &_text {
+        font-size: 14px;
+      }
+      &_button {
+        margin: 0 auto;
+        margin-top: 40px;
+        font-size: 30px;
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .teamImg {
+      display: none;
+    }
+  }
+  .projectWrap {
+    .project {
+      width: 250px;
+      &_title {
+        font-size: 40px;
+        line-height: 30px;
+      }
+      &_text {
+        font-size: 17px;
+        padding: 30px 0 20px 0;
+        line-height: 20px;
+      }
+      &_button {
+        margin-top: 40px;
+        padding: 3px 20px;
+      }
+    }
+  }
+  .shopWrap {
+    .shopBox {
+      padding: 10px;
+      padding-bottom: 90px;
+      text-align: center;
+      &_title {
+        font-size: 35px;
+      }
+      &_underTitle {
+        font-size: 20px;
+      }
+    }
+    .shopImg {
+      display: none;
+    }
+  }
+  .contactWrap {
+    position: relative;
+    justify-content: center;
+    .contactBox {
+      padding: 40px 10px 10px 10px;
+
+      &_title {
+        font-size: 40px;
+      }
+
+      &_socialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        &_one {
+          font-size: 60px;
+          margin-bottom: 40px;
+        }
+      }
     }
   }
 }
