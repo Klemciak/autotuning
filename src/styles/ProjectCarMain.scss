@@ -97,3 +97,74 @@
     }
   }
 }
+
+@media (max-width: 1500px) {
+  .ProjectCarMainWrap {
+    margin: 30px;
+    .ProjectCarMainWrap_box {
+      width: 46%;
+      &:hover {
+        & .box_inside_carText {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .ProjectCarMainWrap {
+    margin: 30px 20px;
+    .ProjectCarMainWrap_box {
+      width: 47%;
+      &:hover {
+        & .box_inside_carText {
+          width: 40%;
+        }
+      }
+    }
+  }
+  .ProjectCarMainWrap_box_inside {
+    .box_inside_carText {
+      width: 40%;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .ProjectCarMainWrap {
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 10px;
+    .ProjectCarMainWrap_box {
+      margin: 30px 0;
+      width: 95%;
+      &:hover {
+        & .box_inside_carText {
+          width: 25%;
+        }
+      }
+    }
+  }
+  .ProjectCarMainWrap_box_inside {
+    .box_inside_carText {
+      width: 25%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .ProjectCarMainWrap {
+    margin: 20px 4px;
+    .ProjectCarMainWrap_box {
+      margin: 20px 0;
+      width: 97%;
+    }
+  }
+  .ProjectCarMainWrap_box_inside {
+    .box_inside_carName {
+      font-size: 35px;
+    }
+    .box_inside_carText {
+      display: none;
+    }
+  }
+}
