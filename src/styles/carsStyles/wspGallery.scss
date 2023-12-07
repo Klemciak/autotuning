@@ -92,3 +92,18 @@
   bottom: 2%;
   opacity: 0.7;
 }
+
+@media (max-width: 850px) {
+  .galleryWrap {
+    & .single {
+      max-width: 49%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .galleryWrap {
+    & .single {
+      max-width: 99%;
+    }
+  }
+}
