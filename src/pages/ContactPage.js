@@ -1,69 +1,77 @@
 import React, { useState } from "react"
-import validator from "validator"
+
 import "../styles/ContactPage.scss"
 import BackToTopButton from "../components/BackToTopButton"
 const ContactPage = () => {
-  const [nameInputValue, setNameInputValue] = useState("")
-  const [nameInputError, setNameInputError] = useState(false)
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const formatPhoneNumber = (input) => {
+    let formattedNumber = input.replace(/\D/g, "")
+    if (formattedNumber.length > 3) {
+      formattedNumber = formattedNumber.replace(/(\d{3})(\d{3})(\d{0})/, "$1-$2-$3")
+    }
+    setPhoneNumber(formattedNumber)
+  }
+  const [values, setValues] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    text: "",
+  })
+  const [errors, setErrors] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    text: "",
+  })
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const validateForm = () => {
+    const newErrors = {}
 
-  const [surnameInputValue, setSurnameInputValue] = useState("")
-  const [surnameInputError, setSurnameInputError] = useState(false)
+    if (values.name === "") {
+      newErrors.name = "Podaj swoje imię"
+    } else {
+      newErrors.name = ""
+    }
 
-  const [emailInputValue, setEmailInputValue] = useState("")
-  const [emailInputError, setEmailInputError] = useState(false)
-
-  const [textAreaValue, setTextAreaValue] = useState("")
-  const [textAreaError, setTextAreaError] = useState("")
-
-  const checkValue = (e, setState, setErrorState) => {
-    const value = e.target.value
-    setState(value)
-    if (value.trim() !== "") {
-      setErrorState(false)
+    if (values.surname === "") {
+      newErrors.surname = "Podaj swoje nazwisko"
+    } else {
+      newErrors.surname = ""
+    }
+    if (values.email === "") {
+      newErrors.email = "Podaj swój e-mail"
+    } else {
+      newErrors.email = ""
+    }
+    if (values.text === "") {
+      newErrors.text = "Uzupełnij to pole"
+    } else {
+      newErrors.text = ""
+    }
+    setErrors(newErrors)
+    if (values.name !== "" && values.surname !== "" && values.email !== "" && values.text !== "") {
+      setValues({
+        name: "",
+        surname: "",
+        email: "",
+        text: "",
+      })
+      setPhoneNumber("")
+      document.getElementById("form_box_name").value = ""
+      document.getElementById("form_box_surname").value = ""
+      document.getElementById("form_box_email").value = ""
+      document.getElementById("form_telephone").value = ""
+      document.getElementById("form_title").value = ""
+      document.getElementById("form_text").value = ""
+      setFormSubmitted(true)
+    } else {
+      setFormSubmitted(false)
     }
   }
-
-  const checkForm = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    if (nameInputValue.trim() === "") {
-      setNameInputError(true)
-    } else {
-      setNameInputError(false)
-    }
-
-    if (surnameInputValue.trim() === "") {
-      setSurnameInputError(true)
-    } else {
-      setSurnameInputError(false)
-    }
-
-    if (emailInputValue.trim() === "") {
-      setEmailInputError(true)
-    } else {
-      setEmailInputError(false)
-    }
-    if (!validator.isEmail(emailInputValue)) {
-      setEmailInputError(true)
-    } else {
-      setEmailInputError(false)
-    }
-
-    if (textAreaValue.trim() === "") {
-      setTextAreaError(true)
-      setEmailInputValue("")
-    } else {
-      setTextAreaError(false)
-    }
-    if (
-      nameInputValue.trim() !== "" &&
-      surnameInputValue.trim() !== "" &&
-      emailInputValue.trim() !== "" &&
-      textAreaValue.trim() !== ""
-    ) {
-      alert("By się wysłało :)")
-    }
+    validateForm()
   }
-
   return (
     <div className="contact">
       <iframe
@@ -81,63 +89,86 @@ const ContactPage = () => {
       <div className="infoAndForm_wrap">
         <div className="contact_info">
           <h1 className="contact_info_title">Skontaktuj się z nami</h1>
-          <h2 className="contact_info_adress">Tymbark, ul. Polna 448, 34-650</h2>
+          <h2 className="contact_info_adress">Kraków, ul. Ciekawa, 34-300</h2>
           <p className="contact_info_telephone">
             Telefon:{" "}
             <a href="tel:+48123456789" className="contact_info_telephone_number">
-              797-451-007
+              123-456-789
             </a>
           </p>
           <p className="contact_info_email">
             E-mail:{" "}
-            <a href="mailto:klemcio@interia.pl" className="contact_info_email_text">
-              klemcio@interia.pl
+            <a href="mailto:random@interia.pl" className="contact_info_email_text">
+              random@interia.pl
             </a>
           </p>
         </div>
 
         <div className="form_wrap">
-          <form className="form" id="form" onSubmit={checkForm} noValidate>
-            <input
-              type="text"
-              placeholder={nameInputError ? "*Imię - To pole jest wymagane" : "*Imię"}
-              required
-              className={`form_name ${nameInputError ? "error" : ""}`}
-              id="form_name"
-              value={nameInputValue}
-              onChange={(e) => checkValue(e, setNameInputValue, setNameInputError)}
-            />
-            <input
-              type="text"
-              placeholder={surnameInputError ? "*Nazwisko - To pole jest wymagane" : "*Nazwisko"}
-              required
-              className={`form_surname ${surnameInputError ? "error" : ""}`}
-              id="form_surname"
-              value={surnameInputValue}
-              onChange={(e) => checkValue(e, setSurnameInputValue, setSurnameInputError)}
-            />
-            <input
-              type="email"
-              placeholder={emailInputError ? "*E-mail - To pole jest wymagane" : "*E-mail"}
-              required
-              className={`form_name_email ${emailInputError ? "error" : ""}`}
-              id="form_name_email"
-              value={emailInputValue}
-              onChange={(e) => checkValue(e, setEmailInputValue, setEmailInputError)}
-            />
-            <input type="tel" placeholder="Telefon" className="form_name_telephone" id="form_name_telephone" />
-            <input type="text" placeholder="Tytuł" className="form_name_title" id="form_name_title" />
-            <textarea
-              type="textarea"
-              placeholder={textAreaError ? "*Twoja wiadomość - To pole jest wymagane" : "*Twoja wiadomość"}
-              className={`form_name_text ${textAreaError ? "error" : ""}`}
-              id="form_name_text"
-              required
-              value={textAreaValue}
-              onChange={(e) => checkValue(e, setTextAreaValue, setTextAreaError)}
-            />
-            <input type="submit" value="Wyślij" className="form_name_btn" id="form_name_btn" />
+          <form className="form" id="form" onSubmit={handleSubmit}>
+            <div className="form_box">
+              <input
+                type="text"
+                placeholder="*Imię"
+                className={`form_box_name ${errors.name ? "error" : ""}`}
+                id="form_box_name"
+                onChange={(e) => setValues({ ...values, name: e.target.value })}
+              />
+              <span className="name_error">{errors.name}</span>
+            </div>
+            <div className="form_box">
+              <input
+                type="text"
+                placeholder="*Nazwisko"
+                className={`form_box_surname ${errors.surname ? "error" : ""}`}
+                id="form_box_surname"
+                onChange={(e) => setValues({ ...values, surname: e.target.value })}
+              />
+              <span className="surname_error">{errors.surname}</span>
+            </div>
+            <div className="form_box">
+              <input
+                type="email"
+                placeholder="*E-mail"
+                className={`form_box_email ${errors.email ? "error" : ""}`}
+                id="form_box_email"
+                onChange={(e) => setValues({ ...values, email: e.target.value })}
+              />
+              <span className="email_error">{errors.email} </span>
+            </div>
+            <div className="form_box">
+              <input
+                type="tel"
+                placeholder="Telefon"
+                className="form_telephone"
+                id="form_telephone"
+                maxLength="15"
+                value={phoneNumber}
+                onChange={(e) => formatPhoneNumber(e.target.value)}
+              />
+            </div>
+            <div className="form_box">
+              <input type="text" placeholder="Tytuł" className="form_title" id="form_title" />
+            </div>
+            <div className="form_box">
+              <textarea
+                type="textarea"
+                placeholder="*Twoja wiadomość"
+                className={`form_text ${errors.text ? "error" : ""}`}
+                id="form_text"
+                onChange={(e) => setValues({ ...values, text: e.target.value })}
+              />
+              <span className="textarea_error">{errors.text}</span>
+            </div>
+
+            <input type="submit" value="Wyślij" className="form_btn" id="form_btn" />
           </form>
+          <div className={`form_send ${formSubmitted ? "show" : ""}`}>
+            <span className="form_send_text">Wiadomość wysłana</span>
+            <button className="form_send_back" onClick={() => setFormSubmitted(false)}>
+              Powrót
+            </button>
+          </div>
         </div>
       </div>
       <BackToTopButton />
