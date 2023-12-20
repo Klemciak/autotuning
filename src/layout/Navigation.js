@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useState } from "react"
 import { NavLink, Link } from "react-router-dom"
 import list from "../components/NavigationList.js"
 import logo from "../graphics/logo.png"
@@ -11,31 +11,21 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons"
 const Navigation = () => {
   const [showProjectDropdown, setShowProjectDropdown] = useState(false)
   const [showHamburgerNav, setShowHamburgerNav] = useState(false)
-  const dropdownRef = useRef()
 
-  const toggleDropdown = () => {
-    setShowProjectDropdown((prevShowProjectDropdown) => !prevShowProjectDropdown)
+  const handleMouseEnter = () => {
+    setShowProjectDropdown(true)
   }
 
-  useEffect(() => {
-    const handler = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setShowProjectDropdown(false)
-      }
-    }
-
-    document.addEventListener("mousedown", handler)
-
-    return () => {
-      document.removeEventListener("mousedown", handler)
-    }
-  }, [])
-
+  const handleMouseLeave = () => {
+    setShowProjectDropdown(false)
+  }
   const menu = list.map((item) => (
     <li
       key={item.name}
       className={`nav_list_element ${item.animation} ${item.path === "/project" ? "project" : ""}`}
       id={`${item.id}`}
+      onMouseEnter={item.id === "3" ? handleMouseEnter : undefined}
+      onMouseLeave={item.id === "3" ? handleMouseLeave : undefined}
     >
       <NavLink to={item.path} className="nav_list_element_text" onClick={() => setShowHamburgerNav(false)}>
         {item.name}
@@ -51,19 +41,16 @@ const Navigation = () => {
         </Link>
         <ul className="nav_list">
           {menu}
-          <li ref={dropdownRef}>
-            <span
-              className={`material-symbols-outlined nav_list_arrow ${
-                showProjectDropdown ? "show_arrow" : "hide_arrow"
-              }`}
-              onClick={toggleDropdown}
-            >
-              double_arrow
-            </span>
-            <div className={`nav_list_dropdown ${showProjectDropdown ? "show" : "hide"}`}>
+
+          <div
+            className={`nav_list_dropdown ${showProjectDropdown ? "show" : "hide"}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="nav_list_dropdownLook">
               <Dropdown />
             </div>
-          </li>
+          </div>
         </ul>
         {/* hamburger nav */}
         <div className="nav_hamburger">
