@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 export function ShoppingCart() {
+  const { closeCart, cartItems, IsOpen } = useShoppingCart()
   const cartPopupRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     const handler = (e) => {
@@ -19,8 +20,8 @@ export function ShoppingCart() {
     return () => {
       document.removeEventListener("mousedown", handler)
     }
-  }, [])
-  const { closeCart, cartItems, IsOpen } = useShoppingCart()
+  }, [closeCart])
+
   return (
     <div className={`cartPopupWrap ${IsOpen ? "show" : ""}`} ref={cartPopupRef}>
       <div className="cartPopup">

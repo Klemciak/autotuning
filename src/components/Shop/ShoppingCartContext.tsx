@@ -9,7 +9,7 @@ type CartItem = {
   quantity: number
 }
 
-type ShoppingCartContext = {
+type ShoppingCartContextOptions = {
   openCart: () => void
   closeCart: () => void
   getItemQuantity: (id: number) => number
@@ -20,7 +20,7 @@ type ShoppingCartContext = {
   cartItems: CartItem[]
   IsOpen: boolean
 }
-const ShoppingCartContext = createContext({} as ShoppingCartContext)
+const ShoppingCartContext = createContext({} as ShoppingCartContextOptions)
 
 export function useShoppingCart() {
   return useContext(ShoppingCartContext)
