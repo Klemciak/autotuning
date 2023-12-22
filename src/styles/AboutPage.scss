@@ -14,7 +14,7 @@
   }
   &_persons {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     overflow-x: scroll;
     &::-webkit-scrollbar {
@@ -100,7 +100,7 @@
   }
   &_box {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 
     &_img {
@@ -134,7 +134,7 @@
   }
   &_box {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     line-height: 40px;
     &_img {
@@ -170,7 +170,7 @@
 .readMore {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   padding: 80px 100px;
 
   &_box {

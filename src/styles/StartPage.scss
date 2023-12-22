@@ -2,7 +2,7 @@
 .teamWrap {
   background-color: $darkGrey-color;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -134,7 +134,7 @@
   position: relative;
   background-color: $darkGrey-color;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
 
@@ -208,7 +208,7 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   overflow: hidden;
   .contactBox {
     padding: 60px;
